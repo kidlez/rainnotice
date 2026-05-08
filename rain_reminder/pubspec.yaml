@@ -1,0 +1,33 @@
+name: rain_reminder
+description: 雨声提醒 - 天气提醒 + 场景化语音播报
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  flutter_riverpod: ^2.4.0
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  dio: ^5.4.0
+  flutter_local_notifications: 18.0.1
+  flutter_tts: ^4.0.2
+  workmanager: ^0.5.2
+  intl: ^0.20.2
+  geolocator: ^10.1.0
+  geocoding: ^2.1.1
+  uuid: ^4.2.1
+  timezone: ^0.9.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
