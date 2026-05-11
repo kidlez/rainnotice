@@ -20,6 +20,8 @@ class StorageService {
     _settingsBoxInstance = await Hive.openBox(_settingsBox);
   }
 
+  // ──── 城市 ────
+
   List<City> getCities() {
     return _citiesBoxInstance.values.map((v) {
       final map = jsonDecode(v.toString()) as Map<String, dynamic>;
@@ -29,15 +31,15 @@ class StorageService {
 
   Future<void> saveCity(City city) async {
     await _citiesBoxInstance.put(city.id, jsonEncode({
-      'id': city.id,
-      'name': city.name,
-      'code': city.code,
+      'id': city.id, 'name': city.name, 'code': city.code,
     }));
   }
 
   Future<void> deleteCity(String id) async {
     await _citiesBoxInstance.delete(id);
   }
+
+  // ──── 提醒 ────
 
   List<ReminderNode> getReminders() {
     final result = _remindersBoxInstance.values.map((v) {
@@ -49,6 +51,7 @@ class StorageService {
         minute: map['minute'],
         enabled: map['enabled'] ?? true,
         customMessage: map['customMessage'],
+        repeatDays: map['repeatDays'] ?? ReminderNode.everyDay,
       );
     }).toList();
     result.sort((a, b) {
@@ -60,12 +63,8 @@ class StorageService {
 
   Future<void> saveReminder(ReminderNode node) async {
     await _remindersBoxInstance.put(node.id, jsonEncode({
-      'id': node.id,
-      'name': node.name,
-      'hour': node.hour,
-      'minute': node.minute,
-      'enabled': node.enabled,
-      'customMessage': node.customMessage,
+      'id': node.id, 'name': node.name, 'hour': node.hour, 'minute': node.minute,
+      'enabled': node.enabled, 'customMessage': node.customMessage, 'repeatDays': node.repeatDays,
     }));
   }
 
@@ -81,6 +80,8 @@ class StorageService {
       await _remindersBoxInstance.put(id, jsonEncode(map));
     }
   }
+
+  // ──── 设置 ────
 
   AppSettings getSettings() {
     final raw = _settingsBoxInstance.get('app_settings');
@@ -102,14 +103,67 @@ class StorageService {
 
   Future<void> saveSettings(AppSettings settings) async {
     await _settingsBoxInstance.put('app_settings', jsonEncode({
-      'apiKey': settings.apiKey,
-      'defaultCityCode': settings.defaultCityCode,
-      'defaultCityName': settings.defaultCityName,
-      'messageStyleIndex': settings.messageStyleIndex,
-      'voiceEnabled': settings.voiceEnabled,
-      'notificationEnabled': settings.notificationEnabled,
-      'speechRate': settings.speechRate,
-      'rainAlertMinutes': settings.rainAlertMinutes,
+      'apiKey': settings.apiKey, 'defaultCityCode': settings.defaultCityCode,
+      'defaultCityName': settings.defaultCityName, 'messageStyleIndex': settings.messageStyleIndex,
+      'voiceEnabled': settings.voiceEnabled, 'notificationEnabled': settings.notificationEnabled,
+      'speechRate': settings.speechRate, 'rainAlertMinutes': settings.rainAlertMinutes,
     }));
+  }
+
+  // ──── 天气缓存 ────
+
+  Future<void> saveWeatherCache(Map<String, dynamic> data) async {
+    data['_cachedAt'] = DateTime.now().toIso8601String();
+    await _settingsBoxInstance.put('weather_cache', jsonEncode(data));
+  }
+
+  Map<String, dynamic>? getWeatherCache() {
+    final raw = _settingsBoxInstance.get('weather_cache');
+    if (raw == null) return null;
+    try {
+      return jsonDecode(raw.toString()) as Map<String, dynamic>;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  // ──── 数据版本迁移 ────
+
+  static const int _currentStorageVersion = 2;
+
+  Future<void> migrateIfNeeded() async {
+    final stored = _settingsBoxInstance.get('_storageVersion', defaultValue: 0) as int;
+    if (stored >= _currentStorageVersion) return;
+
+    if (stored < 1) await _migrateV0toV1();
+    if (stored < 2) await _migrateV1toV2();
+
+    await _settingsBoxInstance.put('_storageVersion', _currentStorageVersion);
+  }
+
+  Future<void> _migrateV0toV1() async {
+    final raw = _settingsBoxInstance.get('app_settings');
+    if (raw == null) return;
+    try {
+      final map = jsonDecode(raw.toString()) as Map<String, dynamic>;
+      map.putIfAbsent('rainAlertMinutes', () => 30);
+      map.putIfAbsent('speechRate', () => 1.0);
+      await _settingsBoxInstance.put('app_settings', jsonEncode(map));
+    } catch (_) {}
+  }
+
+  Future<void> _migrateV1toV2() async {
+    // 为所有旧提醒补 repeatDays 字段（默认每天）
+    for (final key in _remindersBoxInstance.keys) {
+      try {
+        final raw = _remindersBoxInstance.get(key);
+        if (raw == null) continue;
+        final map = jsonDecode(raw.toString()) as Map<String, dynamic>;
+        if (!map.containsKey('repeatDays')) {
+          map['repeatDays'] = ReminderNode.everyDay;
+          await _remindersBoxInstance.put(key, jsonEncode(map));
+        }
+      } catch (_) {}
+    }
   }
 }

@@ -17,26 +17,46 @@ class WeatherNotifier extends StateNotifier<WeatherData?> {
   final AppSettings _settings;
   final WeatherService _weatherService = WeatherService();
   Timer? _refreshTimer;
+  DateTime? _lastFetched;
 
   WeatherNotifier(this._storage, this._settings) : super(null) {
+    _loadCache();
     startAutoRefresh();
+  }
+
+  void _loadCache() {
+    final cached = _storage.getWeatherCache();
+    if (cached != null) {
+      final temp = (cached['temp'] as num?)?.toDouble();
+      if (temp != null) {
+        state = WeatherData(
+          cityName: cached['city'] ?? '',
+          temperature: temp,
+          condition: cached['condition'] ?? '',
+          iconCode: cached['icon'] ?? '',
+          humidity: cached['humidity'] ?? 0,
+          windDirection: cached['wind'] ?? '',
+          windScale: cached['windScale'] ?? 0,
+          conditionText: cached['condition'] ?? '',
+        );
+        _lastFetched = DateTime.tryParse(cached['_cachedAt'] ?? '');
+      }
+    }
   }
 
   Future<void> fetchWeather() async {
     final settings = _settings;
     if (settings.defaultCityCode.isEmpty) return;
 
-    state = await _weatherService.getCurrentWeather(
-      settings.apiKey,
-      settings.defaultCityCode,
-      settings.defaultCityName,
-    );
+    try {
+      state = await _weatherService.getCurrentWeather(
+        settings.apiKey, settings.defaultCityCode, settings.defaultCityName,
+      );
+    } catch (_) {}
 
     if (state != null) {
       final minutely = await _weatherService.getMinutelyRain(
-        settings.apiKey,
-        settings.defaultCityCode,
-        settings.defaultCityName,
+        settings.apiKey, settings.defaultCityCode, settings.defaultCityName,
       );
       state = WeatherData(
         cityName: state!.cityName,
@@ -54,14 +74,26 @@ class WeatherNotifier extends StateNotifier<WeatherData?> {
         rainIn2Hours: state!.rainIn2Hours,
         tempDrop: state!.tempDrop,
       );
+      _lastFetched = DateTime.now();
+
+      // 缓存天气
+      _storage.saveWeatherCache({
+        'city': state!.cityName,
+        'temp': state!.temperature,
+        'condition': state!.condition,
+        'icon': state!.iconCode,
+        'humidity': state!.humidity,
+        'wind': state!.windDirection,
+        'windScale': state!.windScale,
+      });
     }
   }
 
+  DateTime? get lastFetched => _lastFetched;
+
   void startAutoRefresh() {
     _refreshTimer?.cancel();
-    _refreshTimer = Timer.periodic(const Duration(minutes: 30), (_) {
-      fetchWeather();
-    });
+    _refreshTimer = Timer.periodic(const Duration(minutes: 30), (_) => fetchWeather());
     fetchWeather();
   }
 

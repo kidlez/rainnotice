@@ -4,6 +4,7 @@ import '../../../data/models/app_settings.dart';
 import '../../../data/services/weather_service.dart';
 import '../../../data/services/tts_service.dart';
 import '../../../data/services/locator_service.dart';
+import '../../../data/services/audio_service.dart';
 import '../../../presentation/providers/settings_provider.dart';
 import '../../../presentation/providers/theme_provider.dart';
 
@@ -143,6 +144,9 @@ class SettingsScreen extends ConsumerWidget {
               ],
             ),
           ),
+          const SizedBox(height: 16),
+          _sectionHeader(context, '白噪音'),
+          const WhiteNoiseCard(),
           const SizedBox(height: 32),
         ],
       ),
@@ -230,6 +234,56 @@ class SettingsScreen extends ConsumerWidget {
           },
         );
       },
+    );
+  }
+}
+
+// ──── 白噪音卡片（独立 StatefulWidget） ────
+
+class WhiteNoiseCard extends StatefulWidget {
+  const WhiteNoiseCard({super.key});
+  @override
+  State<WhiteNoiseCard> createState() => _WhiteNoiseCardState();
+}
+
+class _WhiteNoiseCardState extends State<WhiteNoiseCard> {
+  final AudioService _audio = AudioService();
+  String? _active;
+
+  @override
+  void dispose() { _audio.dispose(); super.dispose(); }
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(12),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          const Text('背景音', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600)),
+          const SizedBox(height: 8),
+          Wrap(spacing: 8, children: AudioService.sounds.entries.map((e) {
+            final active = _active == e.key;
+            return ChoiceChip(
+              label: Text(e.value),
+              selected: active,
+              avatar: active ? const Icon(Icons.volume_up, size: 16) : null,
+              onSelected: (_) async {
+                if (active) {
+                  await _audio.stop();
+                  setState(() => _active = null);
+                } else {
+                  await _audio.play(e.key);
+                  setState(() => _active = e.key);
+                }
+              },
+            );
+          }).toList()),
+          if (_active != null) Padding(
+            padding: const EdgeInsets.only(top: 8),
+            child: Text('🎵 正在播放：${AudioService.sounds[_active]} | 循环播放', style: TextStyle(fontSize: 11, color: Theme.of(context).colorScheme.outline)),
+          ),
+        ]),
+      ),
     );
   }
 }

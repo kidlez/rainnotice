@@ -1,28 +1,39 @@
-import 'dart:math';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../data/models/reminder_node.dart';
 import '../../data/models/app_settings.dart';
 import '../../data/services/storage_service.dart';
 import '../../data/services/notification_service.dart';
 import '../../data/services/tts_service.dart';
-import '../../core/constants/app_strings.dart';
+import '../../data/services/message_loader.dart';
 import 'settings_provider.dart';
 import 'weather_provider.dart';
+
+final messageLoaderProvider = Provider<MessageLoader>((ref) {
+  return MessageLoader();
+});
 
 final reminderProvider = StateNotifierProvider<ReminderNotifier, List<ReminderNode>>((ref) {
   final storage = ref.watch(storageServiceProvider);
   final weather = ref.watch(weatherProvider.notifier);
   final settings = ref.watch(settingsProvider);
-  return ReminderNotifier(storage, weather, settings);
+  final loader = ref.watch(messageLoaderProvider);
+  return ReminderNotifier(storage, weather, settings, loader);
 });
 
 class ReminderNotifier extends StateNotifier<List<ReminderNode>> {
   final StorageService _storage;
   final WeatherNotifier _weatherNotifier;
   final AppSettings _settings;
+  final MessageLoader _messageLoader;
 
-  ReminderNotifier(this._storage, this._weatherNotifier, this._settings)
-      : super(_storage.getReminders());
+  ReminderNotifier(this._storage, this._weatherNotifier, this._settings, this._messageLoader)
+      : super([]) {
+    _load();
+  }
+
+  void _load() {
+    state = _storage.getReminders();
+  }
 
   void addReminder(ReminderNode node) {
     _storage.saveReminder(node);
@@ -48,7 +59,8 @@ class ReminderNotifier extends StateNotifier<List<ReminderNode>> {
 
   void initializePresets() {
     if (state.isNotEmpty) return;
-    final presets = AppStrings.presetReminders.entries.map((e) {
+    final presets = _messageLoader.getPresets();
+    final nodes = presets.entries.map((e) {
       return ReminderNode(
         id: 'preset_${e.key}',
         name: e.key,
@@ -57,10 +69,10 @@ class ReminderNotifier extends StateNotifier<List<ReminderNode>> {
         enabled: true,
       );
     }).toList();
-    for (final preset in presets) {
+    for (final preset in nodes) {
       _storage.saveReminder(preset);
     }
-    state = presets;
+    state = nodes;
     _scheduleAll();
   }
 
@@ -68,18 +80,13 @@ class ReminderNotifier extends StateNotifier<List<ReminderNode>> {
     if (node.customMessage != null && node.customMessage!.isNotEmpty) {
       return node.customMessage!;
     }
-    final settings = _settings;
-    final isToxic = settings.messageStyle == MessageStyle.toxic;
-    final messages = isToxic
-        ? (AppStrings.toxicMessages[node.name] ?? AppStrings.toxicMessages['default']!)
-        : (AppStrings.warmMessages[node.name] ?? AppStrings.warmMessages['default']!);
-    return messages[Random().nextInt(messages.length)];
+    final style = _settings.messageStyle;
+    return _messageLoader.getMessage(node.name, style);
   }
 
   Future<void> triggerReminder(ReminderNode node) async {
     final notificationService = NotificationService();
     final ttsService = TtsService();
-    final settings = _settings;
 
     String message = getMessage(node);
 
@@ -91,7 +98,7 @@ class ReminderNotifier extends StateNotifier<List<ReminderNode>> {
       }
     }
 
-    if (settings.notificationEnabled) {
+    if (_settings.notificationEnabled) {
       await notificationService.showReminderNotification(
         id: node.id.hashCode,
         title: '${node.name}时间',
@@ -99,8 +106,8 @@ class ReminderNotifier extends StateNotifier<List<ReminderNode>> {
       );
     }
 
-    if (settings.voiceEnabled) {
-      await ttsService.speak(message, rate: settings.speechRate);
+    if (_settings.voiceEnabled) {
+      await ttsService.speak(message, rate: _settings.speechRate);
     }
   }
 
