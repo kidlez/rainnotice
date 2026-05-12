@@ -1,104 +1,78 @@
 # 雨声提醒 - 启动文档
 
-## 环境准备
+---
+
+## 方式一：Windows 直接启动（推荐，零依赖）
+
+**已完成构建，无需任何环境！**
+
+双击运行即可：
+```
+E:\code\rain_reminder\build\windows\x64\runner\Release\rain_reminder.exe
+```
+
+整个 `Release` 文件夹（约 33MB）可复制到任意 Windows 电脑，双击 exe 直接运行。
+
+**重新构建 Windows exe（修改代码后）**：
 
 ```powershell
-# 1. 设置镜像（国内必需）
 $env:PUB_HOSTED_URL = "https://pub.flutter-io.cn"
 $env:FLUTTER_STORAGE_BASE_URL = "https://storage.flutter-io.cn"
-
-# 2. 设置 Java 路径（Android 构建需要）
-$env:JAVA_HOME = "C:\Program Files\Microsoft\jdk-21.0.11.10-hotspot"
-$env:Path = "$env:JAVA_HOME\bin;C:\flutter\bin;$env:Path"
-
-# 3. 设置 Android SDK 路径
-$env:ANDROID_HOME = "C:\Users\Administrator\AppData\Local\Android\sdk"
-```
-
----
-
-## 方式一：Web 版（最快）
-
-**1. 安装依赖**
-
-```powershell
 cd E:\code\rain_reminder
-flutter pub get
-```
-
-**2. 编译**
-
-```powershell
-flutter build web --release
-```
-
-**3. 启动服务**
-
-```powershell
-cd build\web
-python -m http.server 8080
-```
-
-**4. 打开浏览器**
-
-访问 `http://localhost:8080`
-
-> 语音播报依赖浏览器 SpeechSynthesis API，Chrome/Edge 均支持。
-
----
-
-## 方式二：Android APK（手机安装）
-
-**1. 安装依赖**
-
-```powershell
-cd E:\code\rain_reminder
-flutter pub get
-```
-
-**2. 构建拆分 APK（正式签名 + 压缩混淆）**
-
-```powershell
-flutter build apk --release --split-per-abi
-```
-
-**3. 输出位置**
-
-```
-build\app\outputs\flutter-apk\
-  ├── app-arm64-v8a-release.apk   (18 MB, 推荐)
-  ├── app-armeabi-v7a-release.apk (16 MB, 老手机)
-  └── app-x86_64-release.apk      (19 MB, 模拟器)
-```
-
-**4. 安装**
-
-将 `app-arm64-v8a-release.apk` 传到手机，点击安装即可。
-
-> 首次启动可能被拦截，需要在手机「设置 → 安全 → 允许安装未知应用」中放行。
-
----
-
-## 方式三：Windows 桌面（exe）
-
-**前置条件**：
-- Visual Studio 2022 Build Tools（C++ 桌面开发工作负载）
-- Windows 开发者模式已开启
-
-```powershell
 flutter build windows --release
 # 输出: build\windows\x64\runner\Release\rain_reminder.exe
 ```
 
 ---
 
-## 方式四：开发调试
+## 方式二：Android APK（手机安装）
 
-**Web 热更新（改代码即时刷新）**
+**构建命令**：
 
 ```powershell
+$env:JAVA_HOME = "C:\Program Files\Microsoft\jdk-21.0.11.10-hotspot"
+$env:Path = "$env:JAVA_HOME\bin;C:\flutter\bin;$env:Path"
+$env:ANDROID_HOME = "C:\Users\Administrator\AppData\Local\Android\sdk"
+$env:PUB_HOSTED_URL = "https://pub.flutter-io.cn"
+$env:FLUTTER_STORAGE_BASE_URL = "https://storage.flutter-io.cn"
+
 cd E:\code\rain_reminder
-flutter run -d chrome
+flutter pub get
+flutter build apk --release --split-per-abi
+```
+
+**输出**：
+
+```
+build\app\outputs\flutter-apk\
+  ├── app-arm64-v8a-release.apk    (20MB, 绝大多数手机)
+  ├── app-armeabi-v7a-release.apk  (17MB, 老款手机)
+  └── app-x86_64-release.apk       (21MB, 模拟器)
+```
+
+将 `app-arm64-v8a-release.apk` 传手机安装。首次安装需在手机设置中允许「安装未知应用」。
+
+---
+
+## 方式三：Web 版（浏览器）
+
+**构建命令**：
+
+```powershell
+$env:PUB_HOSTED_URL = "https://pub.flutter-io.cn"
+$env:FLUTTER_STORAGE_BASE_URL = "https://storage.flutter-io.cn"
+
+cd E:\code\rain_reminder
+flutter pub get
+flutter build web --release
+```
+
+**启动**：
+
+```powershell
+cd build\web
+python -m http.server 8080
+# 浏览器打开 http://localhost:8080
 ```
 
 ---
