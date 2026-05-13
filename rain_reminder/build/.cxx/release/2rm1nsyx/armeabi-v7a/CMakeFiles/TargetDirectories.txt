@@ -1,0 +1,2 @@
+E:/code/rain_reminder/build/.cxx/release/2rm1nsyx/armeabi-v7a/CMakeFiles/edit_cache.dir
+E:/code/rain_reminder/build/.cxx/release/2rm1nsyx/armeabi-v7a/CMakeFiles/rebuild_cache.dir

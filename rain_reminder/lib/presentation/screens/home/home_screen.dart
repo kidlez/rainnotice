@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/constants/app_colors.dart';
 import '../../../core/utils/time_picker.dart';
 import '../../../core/utils/date_utils.dart';
+import '../../../core/utils/lunar_utils.dart';
 import '../../../data/models/reminder_node.dart';
 import '../../../presentation/providers/weather_provider.dart';
 import '../../../presentation/providers/reminder_provider.dart';
@@ -143,7 +144,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   child: Text(getTimeGreeting(),
                     style: const TextStyle(fontSize: 15, color: Colors.white, fontWeight: FontWeight.w500)),
                 ),
-                const SizedBox(height: 8),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 32),
+                  child: Text(getLunarDisplayText(),
+                    style: TextStyle(fontSize: 11, color: Colors.white.withValues(alpha: 0.55))),
+                ),
+                const SizedBox(height: 4),
                 WeatherCard(weather: weather, lastUpdated: lastFetched),
                 const SizedBox(height: 10),
                 Expanded(

@@ -1,0 +1,6 @@
+{
+  "吃饭": { "hour": 12, "minute": 0 },
+  "喝水": { "hour": 10, "minute": 0 },
+  "运动": { "hour": 14, "minute": 0 },
+  "休息": { "hour": 13, "minute": 0 }
+}

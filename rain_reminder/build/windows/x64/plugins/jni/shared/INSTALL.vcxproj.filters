@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="E:\code\rain_reminder\build\windows\x64\CMakeFiles\9a3c410489cf02217ce05d4ca37786f6\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{A91A5826-BC73-31F5-B9D8-A47267030EFB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
