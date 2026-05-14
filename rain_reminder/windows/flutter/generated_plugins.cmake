@@ -6,6 +6,9 @@ list(APPEND FLUTTER_PLUGIN_LIST
   audioplayers_windows
   flutter_tts
   geolocator_windows
+  screen_retriever_windows
+  system_tray
+  window_manager
 )
 
 list(APPEND FLUTTER_FFI_PLUGIN_LIST

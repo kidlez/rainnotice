@@ -59,6 +59,21 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("E:/code/rain_reminder/build/windows/x64/plugins/screen_retriever_windows/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("E:/code/rain_reminder/build/windows/x64/plugins/system_tray/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("E:/code/rain_reminder/build/windows/x64/plugins/window_manager/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("E:/code/rain_reminder/build/windows/x64/plugins/jni/cmake_install.cmake")
 endif()
 
@@ -167,7 +182,7 @@ endif()
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Runtime" OR NOT CMAKE_INSTALL_COMPONENT)
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-     "E:/code/rain_reminder/build/windows/x64/runner/Debug/audioplayers_windows_plugin.dll;E:/code/rain_reminder/build/windows/x64/runner/Debug/flutter_tts_plugin.dll;E:/code/rain_reminder/build/windows/x64/runner/Debug/geolocator_windows_plugin.dll;E:/code/rain_reminder/build/windows/x64/runner/Debug/dartjni.dll")
+     "E:/code/rain_reminder/build/windows/x64/runner/Debug/audioplayers_windows_plugin.dll;E:/code/rain_reminder/build/windows/x64/runner/Debug/flutter_tts_plugin.dll;E:/code/rain_reminder/build/windows/x64/runner/Debug/geolocator_windows_plugin.dll;E:/code/rain_reminder/build/windows/x64/runner/Debug/screen_retriever_windows_plugin.dll;E:/code/rain_reminder/build/windows/x64/runner/Debug/system_tray_plugin.dll;E:/code/rain_reminder/build/windows/x64/runner/Debug/window_manager_plugin.dll;E:/code/rain_reminder/build/windows/x64/runner/Debug/dartjni.dll")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
       message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
@@ -178,11 +193,14 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Runtime" OR NOT CMAKE_INSTALL_COMPONENT)
       "E:/code/rain_reminder/build/windows/x64/plugins/audioplayers_windows/Debug/audioplayers_windows_plugin.dll"
       "E:/code/rain_reminder/build/windows/x64/plugins/flutter_tts/Debug/flutter_tts_plugin.dll"
       "E:/code/rain_reminder/build/windows/x64/plugins/geolocator_windows/Debug/geolocator_windows_plugin.dll"
+      "E:/code/rain_reminder/build/windows/x64/plugins/screen_retriever_windows/Debug/screen_retriever_windows_plugin.dll"
+      "E:/code/rain_reminder/build/windows/x64/plugins/system_tray/Debug/system_tray_plugin.dll"
+      "E:/code/rain_reminder/build/windows/x64/plugins/window_manager/Debug/window_manager_plugin.dll"
       "E:/code/rain_reminder/build/windows/x64/plugins/jni/shared/Debug/dartjni.dll"
       )
   elseif(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Pp][Rr][Oo][Ff][Ii][Ll][Ee])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-     "E:/code/rain_reminder/build/windows/x64/runner/Profile/audioplayers_windows_plugin.dll;E:/code/rain_reminder/build/windows/x64/runner/Profile/flutter_tts_plugin.dll;E:/code/rain_reminder/build/windows/x64/runner/Profile/geolocator_windows_plugin.dll;E:/code/rain_reminder/build/windows/x64/runner/Profile/dartjni.dll")
+     "E:/code/rain_reminder/build/windows/x64/runner/Profile/audioplayers_windows_plugin.dll;E:/code/rain_reminder/build/windows/x64/runner/Profile/flutter_tts_plugin.dll;E:/code/rain_reminder/build/windows/x64/runner/Profile/geolocator_windows_plugin.dll;E:/code/rain_reminder/build/windows/x64/runner/Profile/screen_retriever_windows_plugin.dll;E:/code/rain_reminder/build/windows/x64/runner/Profile/system_tray_plugin.dll;E:/code/rain_reminder/build/windows/x64/runner/Profile/window_manager_plugin.dll;E:/code/rain_reminder/build/windows/x64/runner/Profile/dartjni.dll")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
       message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
@@ -193,11 +211,14 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Runtime" OR NOT CMAKE_INSTALL_COMPONENT)
       "E:/code/rain_reminder/build/windows/x64/plugins/audioplayers_windows/Profile/audioplayers_windows_plugin.dll"
       "E:/code/rain_reminder/build/windows/x64/plugins/flutter_tts/Profile/flutter_tts_plugin.dll"
       "E:/code/rain_reminder/build/windows/x64/plugins/geolocator_windows/Profile/geolocator_windows_plugin.dll"
+      "E:/code/rain_reminder/build/windows/x64/plugins/screen_retriever_windows/Profile/screen_retriever_windows_plugin.dll"
+      "E:/code/rain_reminder/build/windows/x64/plugins/system_tray/Profile/system_tray_plugin.dll"
+      "E:/code/rain_reminder/build/windows/x64/plugins/window_manager/Profile/window_manager_plugin.dll"
       "E:/code/rain_reminder/build/windows/x64/plugins/jni/shared/Profile/dartjni.dll"
       )
   elseif(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-     "E:/code/rain_reminder/build/windows/x64/runner/Release/audioplayers_windows_plugin.dll;E:/code/rain_reminder/build/windows/x64/runner/Release/flutter_tts_plugin.dll;E:/code/rain_reminder/build/windows/x64/runner/Release/geolocator_windows_plugin.dll;E:/code/rain_reminder/build/windows/x64/runner/Release/dartjni.dll")
+     "E:/code/rain_reminder/build/windows/x64/runner/Release/audioplayers_windows_plugin.dll;E:/code/rain_reminder/build/windows/x64/runner/Release/flutter_tts_plugin.dll;E:/code/rain_reminder/build/windows/x64/runner/Release/geolocator_windows_plugin.dll;E:/code/rain_reminder/build/windows/x64/runner/Release/screen_retriever_windows_plugin.dll;E:/code/rain_reminder/build/windows/x64/runner/Release/system_tray_plugin.dll;E:/code/rain_reminder/build/windows/x64/runner/Release/window_manager_plugin.dll;E:/code/rain_reminder/build/windows/x64/runner/Release/dartjni.dll")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
       message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
@@ -208,6 +229,9 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Runtime" OR NOT CMAKE_INSTALL_COMPONENT)
       "E:/code/rain_reminder/build/windows/x64/plugins/audioplayers_windows/Release/audioplayers_windows_plugin.dll"
       "E:/code/rain_reminder/build/windows/x64/plugins/flutter_tts/Release/flutter_tts_plugin.dll"
       "E:/code/rain_reminder/build/windows/x64/plugins/geolocator_windows/Release/geolocator_windows_plugin.dll"
+      "E:/code/rain_reminder/build/windows/x64/plugins/screen_retriever_windows/Release/screen_retriever_windows_plugin.dll"
+      "E:/code/rain_reminder/build/windows/x64/plugins/system_tray/Release/system_tray_plugin.dll"
+      "E:/code/rain_reminder/build/windows/x64/plugins/window_manager/Release/window_manager_plugin.dll"
       "E:/code/rain_reminder/build/windows/x64/plugins/jni/shared/Release/dartjni.dll"
       )
   endif()

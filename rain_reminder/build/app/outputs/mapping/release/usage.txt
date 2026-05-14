@@ -844,33 +844,160 @@ androidx.arch.core.executor.TaskExecutor:
     public void executeOnMainThread(java.lang.Runnable)
 androidx.collection.ArrayMap:
     public void <init>(androidx.collection.SimpleArrayMap)
-    public boolean containsAll(java.util.Collection)
-    public boolean removeAll(java.util.Collection)
+androidx.collection.ArrayMapKt
 androidx.collection.ArraySet:
-    private static final int BASE_SIZE
-    private static final int CACHE_SIZE
-    private static final boolean DEBUG
-    private static final java.lang.String TAG
     public void <init>(androidx.collection.ArraySet)
     public void <init>(java.util.Collection)
-    public void addAll(androidx.collection.ArraySet)
-    public boolean removeAll(androidx.collection.ArraySet)
+    public void <init>(java.lang.Object[])
+    public final void addAll(androidx.collection.ArraySet)
+    public final boolean removeAll(androidx.collection.ArraySet)
+androidx.collection.ArraySetJvmUtil:
+    private void <init>()
+androidx.collection.ArraySetKt:
+    public static final int ARRAY_SET_BASE_SIZE
+    public static final void addAllInternal(androidx.collection.ArraySet,androidx.collection.ArraySet)
+    public static final boolean addAllInternal(androidx.collection.ArraySet,java.util.Collection)
+    public static final boolean addInternal(androidx.collection.ArraySet,java.lang.Object)
+    public static final androidx.collection.ArraySet arraySetOf()
+    public static final varargs androidx.collection.ArraySet arraySetOf(java.lang.Object[])
+    public static final void clearInternal(androidx.collection.ArraySet)
+    public static final boolean containsAllInternal(androidx.collection.ArraySet,java.util.Collection)
+    public static final boolean containsInternal(androidx.collection.ArraySet,java.lang.Object)
+    public static final void ensureCapacityInternal(androidx.collection.ArraySet,int)
+    public static final boolean equalsInternal(androidx.collection.ArraySet,java.lang.Object)
+    public static final int hashCodeInternal(androidx.collection.ArraySet)
+    public static final int indexOfInternal(androidx.collection.ArraySet,java.lang.Object)
+    public static final boolean isEmptyInternal(androidx.collection.ArraySet)
+    public static final boolean removeAllInternal(androidx.collection.ArraySet,androidx.collection.ArraySet)
+    public static final boolean removeAllInternal(androidx.collection.ArraySet,java.util.Collection)
+    public static final java.lang.Object removeAtInternal(androidx.collection.ArraySet,int)
+    public static final boolean removeInternal(androidx.collection.ArraySet,java.lang.Object)
+    public static final boolean retainAllInternal(androidx.collection.ArraySet,java.util.Collection)
+    public static final java.lang.String toStringInternal(androidx.collection.ArraySet)
+    public static final java.lang.Object valueAtInternal(androidx.collection.ArraySet,int)
 androidx.collection.CircularArray
 androidx.collection.CircularIntArray
-androidx.collection.ContainerHelpers:
-    private void <init>()
-    static int binarySearch(long[],int,long)
-    public static int idealLongArraySize(int)
+androidx.collection.CollectionPlatformUtils
+androidx.collection.FloatFloatMap
+androidx.collection.FloatFloatMapKt
+androidx.collection.FloatFloatPair
+androidx.collection.FloatIntMap
+androidx.collection.FloatIntMapKt
+androidx.collection.FloatList
+androidx.collection.FloatListKt
+androidx.collection.FloatLongMap
+androidx.collection.FloatLongMapKt
+androidx.collection.FloatObjectMap
+androidx.collection.FloatObjectMapKt
+androidx.collection.FloatSet
+androidx.collection.FloatSetKt
+androidx.collection.IntFloatMap
+androidx.collection.IntFloatMapKt
+androidx.collection.IntIntMap
+androidx.collection.IntIntMapKt
+androidx.collection.IntIntPair
+androidx.collection.IntList
+androidx.collection.IntListKt
+androidx.collection.IntLongMap
+androidx.collection.IntLongMapKt
+androidx.collection.IntObjectMap
+androidx.collection.IntObjectMapKt
+androidx.collection.IntSet
+androidx.collection.IntSetKt
+androidx.collection.LongFloatMap
+androidx.collection.LongFloatMapKt
+androidx.collection.LongIntMap
+androidx.collection.LongIntMapKt
+androidx.collection.LongList
+androidx.collection.LongListKt
+androidx.collection.LongLongMap
+androidx.collection.LongLongMapKt
+androidx.collection.LongLongPair
+androidx.collection.LongObjectMap
+androidx.collection.LongObjectMapKt
+androidx.collection.LongSet
+androidx.collection.LongSetKt
 androidx.collection.LongSparseArray
+androidx.collection.LongSparseArrayKt$keyIterator$1
+androidx.collection.LongSparseArrayKt$valueIterator$1
+androidx.collection.LongSparseArrayKt
 androidx.collection.LruCache
+androidx.collection.LruCacheKt$lruCache$1
+androidx.collection.LruCacheKt$lruCache$2
+androidx.collection.LruCacheKt$lruCache$3
+androidx.collection.LruCacheKt$lruCache$4
+androidx.collection.LruCacheKt
+androidx.collection.MapEntry
+androidx.collection.MutableFloatFloatMap
+androidx.collection.MutableFloatIntMap
+androidx.collection.MutableFloatList
+androidx.collection.MutableFloatLongMap
+androidx.collection.MutableFloatObjectMap
+androidx.collection.MutableFloatSet
+androidx.collection.MutableIntFloatMap
+androidx.collection.MutableIntIntMap
+androidx.collection.MutableIntList
+androidx.collection.MutableIntLongMap
+androidx.collection.MutableIntObjectMap
+androidx.collection.MutableIntSet
+androidx.collection.MutableLongFloatMap
+androidx.collection.MutableLongIntMap
+androidx.collection.MutableLongList
+androidx.collection.MutableLongLongMap
+androidx.collection.MutableLongObjectMap
+androidx.collection.MutableLongSet
+androidx.collection.MutableMapEntry
+androidx.collection.MutableObjectFloatMap
+androidx.collection.MutableObjectIntMap
+androidx.collection.MutableObjectList$MutableObjectListIterator
+androidx.collection.MutableObjectList$ObjectListMutableList
+androidx.collection.MutableObjectList$SubList
+androidx.collection.MutableObjectList
+androidx.collection.MutableObjectLongMap
+androidx.collection.MutableScatterMap$MutableMapWrapper$entries$1$iterator$1$1
+androidx.collection.MutableScatterMap$MutableMapWrapper$entries$1$iterator$1
+androidx.collection.MutableScatterMap$MutableMapWrapper$entries$1
+androidx.collection.MutableScatterMap$MutableMapWrapper$keys$1$iterator$1$iterator$1
+androidx.collection.MutableScatterMap$MutableMapWrapper$keys$1$iterator$1
+androidx.collection.MutableScatterMap$MutableMapWrapper$keys$1
+androidx.collection.MutableScatterMap$MutableMapWrapper$values$1$iterator$1$iterator$1
+androidx.collection.MutableScatterMap$MutableMapWrapper$values$1$iterator$1
+androidx.collection.MutableScatterMap$MutableMapWrapper$values$1
+androidx.collection.MutableScatterMap$MutableMapWrapper
+androidx.collection.MutableScatterMap
+androidx.collection.MutableScatterSet$MutableSetWrapper$iterator$1$iterator$1
+androidx.collection.MutableScatterSet$MutableSetWrapper$iterator$1
+androidx.collection.MutableScatterSet$MutableSetWrapper
+androidx.collection.MutableScatterSet
+androidx.collection.ObjectFloatMap
+androidx.collection.ObjectFloatMapKt
+androidx.collection.ObjectIntMap
+androidx.collection.ObjectIntMapKt
+androidx.collection.ObjectList$toString$1
+androidx.collection.ObjectList
+androidx.collection.ObjectListKt
+androidx.collection.ObjectLongMap
+androidx.collection.ObjectLongMapKt
+androidx.collection.PackingUtilsKt
+androidx.collection.ScatterMap$MapWrapper$entries$1$iterator$1
+androidx.collection.ScatterMap$MapWrapper$entries$1
+androidx.collection.ScatterMap$MapWrapper$keys$1$iterator$1
+androidx.collection.ScatterMap$MapWrapper$keys$1
+androidx.collection.ScatterMap$MapWrapper$values$1$iterator$1
+androidx.collection.ScatterMap$MapWrapper$values$1
+androidx.collection.ScatterMap$MapWrapper
+androidx.collection.ScatterMap
+androidx.collection.ScatterMapKt
+androidx.collection.ScatterSet$SetWrapper$iterator$1
+androidx.collection.ScatterSet$SetWrapper
+androidx.collection.ScatterSet$toString$1
+androidx.collection.ScatterSet
+androidx.collection.ScatterSetKt
 androidx.collection.SimpleArrayMap:
-    private static final int BASE_SIZE
-    private static final int CACHE_SIZE
-    private static final boolean CONCURRENT_MODIFICATION_EXCEPTIONS
-    private static final boolean DEBUG
-    private static final java.lang.String TAG
     public void <init>(androidx.collection.SimpleArrayMap)
+    private final java.lang.Object getOrDefaultInternal(java.lang.Object,java.lang.Object)
     public void putAll(androidx.collection.SimpleArrayMap)
+androidx.collection.SimpleArrayMapKt
 androidx.collection.SparseArrayCompat:
     public void append(int,java.lang.Object)
     public boolean containsKey(int)
@@ -878,6 +1005,7 @@ androidx.collection.SparseArrayCompat:
     public void delete(int)
     public java.lang.Object get(int)
     public java.lang.Object get(int,java.lang.Object)
+    public final boolean getIsEmpty()
     public int indexOfKey(int)
     public int indexOfValue(java.lang.Object)
     public boolean isEmpty()
@@ -891,6 +1019,42 @@ androidx.collection.SparseArrayCompat:
     public java.lang.Object replace(int,java.lang.Object)
     public boolean replace(int,java.lang.Object,java.lang.Object)
     public void setValueAt(int,java.lang.Object)
+androidx.collection.SparseArrayCompatKt:
+    public static final synthetic java.lang.Object access$getDELETED$p()
+    public static final void commonAppend(androidx.collection.SparseArrayCompat,int,java.lang.Object)
+    public static final void commonClear(androidx.collection.SparseArrayCompat)
+    public static final boolean commonContainsKey(androidx.collection.SparseArrayCompat,int)
+    public static final boolean commonContainsValue(androidx.collection.SparseArrayCompat,java.lang.Object)
+    public static final java.lang.Object commonGet(androidx.collection.SparseArrayCompat,int)
+    public static final java.lang.Object commonGet(androidx.collection.SparseArrayCompat,int,java.lang.Object)
+    public static final int commonIndexOfKey(androidx.collection.SparseArrayCompat,int)
+    public static final int commonIndexOfValue(androidx.collection.SparseArrayCompat,java.lang.Object)
+    public static final boolean commonIsEmpty(androidx.collection.SparseArrayCompat)
+    public static final int commonKeyAt(androidx.collection.SparseArrayCompat,int)
+    public static final void commonPut(androidx.collection.SparseArrayCompat,int,java.lang.Object)
+    public static final void commonPutAll(androidx.collection.SparseArrayCompat,androidx.collection.SparseArrayCompat)
+    public static final java.lang.Object commonPutIfAbsent(androidx.collection.SparseArrayCompat,int,java.lang.Object)
+    public static final void commonRemove(androidx.collection.SparseArrayCompat,int)
+    public static final boolean commonRemove(androidx.collection.SparseArrayCompat,int,java.lang.Object)
+    public static final void commonRemoveAt(androidx.collection.SparseArrayCompat,int)
+    public static final void commonRemoveAtRange(androidx.collection.SparseArrayCompat,int,int)
+    public static final java.lang.Object commonReplace(androidx.collection.SparseArrayCompat,int,java.lang.Object)
+    public static final boolean commonReplace(androidx.collection.SparseArrayCompat,int,java.lang.Object,java.lang.Object)
+    public static final void commonSetValueAt(androidx.collection.SparseArrayCompat,int,java.lang.Object)
+    public static final int commonSize(androidx.collection.SparseArrayCompat)
+    public static final java.lang.String commonToString(androidx.collection.SparseArrayCompat)
+    public static final java.lang.Object commonValueAt(androidx.collection.SparseArrayCompat,int)
+    private static final java.lang.Object internalGet(androidx.collection.SparseArrayCompat,int,java.lang.Object)
+androidx.collection.SparseArrayKt$keyIterator$1
+androidx.collection.SparseArrayKt$valueIterator$1
+androidx.collection.SparseArrayKt
+androidx.collection.internal.ContainerHelpersKt:
+    public static final int binarySearch(long[],int,long)
+    public static final int idealLongArraySize(int)
+androidx.collection.internal.Lock
+androidx.collection.internal.LockExtKt
+androidx.collection.internal.LruHashMap
+androidx.collection.internal.PackingHelpers_jvmKt
 androidx.concurrent.futures.AbstractResolvableFuture$SetFuture:
     void <init>(androidx.concurrent.futures.AbstractResolvableFuture,com.google.common.util.concurrent.ListenableFuture)
     public void run()
@@ -954,6 +1118,7 @@ androidx.core.R$id:
     public static int tag_on_receive_content_mime_types
     public static int tag_screen_reader_focusable
     public static int tag_state_description
+    public static int tag_system_bar_state_monitor
     private void <init>()
 androidx.core.R$integer:
     private void <init>()
@@ -989,10 +1154,12 @@ androidx.core.app.ActivityCompat$Api21Impl:
 androidx.core.app.ActivityCompat$Api22Impl
 androidx.core.app.ActivityCompat$Api23Impl:
     private void <init>()
+    static void onSharedElementsReady(java.lang.Object)
 androidx.core.app.ActivityCompat$Api28Impl
 androidx.core.app.ActivityCompat$Api30Impl
 androidx.core.app.ActivityCompat$Api31Impl:
     private void <init>()
+    static boolean isLaunchedFromBubble(android.app.Activity)
 androidx.core.app.ActivityCompat$Api32Impl:
     private void <init>()
 androidx.core.app.ActivityCompat$PermissionCompatDelegate:
@@ -1017,15 +1184,13 @@ androidx.core.app.ActivityCompat:
     public static void setPermissionCompatDelegate(androidx.core.app.ActivityCompat$PermissionCompatDelegate)
 androidx.core.app.ActivityManagerCompat
 androidx.core.app.ActivityOptionsCompat$ActivityOptionsCompatImpl
-androidx.core.app.ActivityOptionsCompat$Api21Impl
-androidx.core.app.ActivityOptionsCompat$Api23Impl
-androidx.core.app.ActivityOptionsCompat$Api24Impl
-androidx.core.app.ActivityOptionsCompat$Api34Impl
+androidx.core.app.ActivityOptionsCompat$BackgroundActivityStartMode
 androidx.core.app.ActivityOptionsCompat:
     public static final java.lang.String EXTRA_USAGE_TIME_REPORT
     public static final java.lang.String EXTRA_USAGE_TIME_REPORT_PACKAGES
     protected void <init>()
     public android.graphics.Rect getLaunchBounds()
+    public int getLaunchDisplayId()
     public static androidx.core.app.ActivityOptionsCompat makeBasic()
     public static androidx.core.app.ActivityOptionsCompat makeClipRevealAnimation(android.view.View,int,int,int,int)
     public static androidx.core.app.ActivityOptionsCompat makeCustomAnimation(android.content.Context,int,int)
@@ -1036,6 +1201,8 @@ androidx.core.app.ActivityOptionsCompat:
     public static androidx.core.app.ActivityOptionsCompat makeThumbnailScaleUpAnimation(android.view.View,android.graphics.Bitmap,int,int)
     public void requestUsageTimeReport(android.app.PendingIntent)
     public androidx.core.app.ActivityOptionsCompat setLaunchBounds(android.graphics.Rect)
+    public androidx.core.app.ActivityOptionsCompat setLaunchDisplayId(int)
+    public androidx.core.app.ActivityOptionsCompat setPendingIntentBackgroundActivityStartMode(int)
     public androidx.core.app.ActivityOptionsCompat setShareIdentityEnabled(boolean)
     public void update(androidx.core.app.ActivityOptionsCompat)
 androidx.core.app.ActivityRecreator$1
@@ -1056,6 +1223,7 @@ androidx.core.app.AppLaunchChecker
 androidx.core.app.AppLocalesStorageHelper
 androidx.core.app.AppOpsManagerCompat$Api23Impl:
     private void <init>()
+    static int noteProxyOp(android.app.AppOpsManager,java.lang.String,java.lang.String)
 androidx.core.app.AppOpsManagerCompat$Api29Impl:
     private void <init>()
 androidx.core.app.AppOpsManagerCompat:
@@ -1193,6 +1361,7 @@ androidx.core.app.NotificationCompat$BubbleMetadata:
     public void setFlags(int)
 androidx.core.app.NotificationCompat$Builder$Api21Impl:
     private void <init>()
+    static android.media.AudioAttributes$Builder setLegacyStreamType(android.media.AudioAttributes$Builder,int)
 androidx.core.app.NotificationCompat$Builder$Api23Impl
 androidx.core.app.NotificationCompat$Builder$Api24Impl
 androidx.core.app.NotificationCompat$Builder:
@@ -1244,11 +1413,13 @@ androidx.core.app.NotificationCompat$CallStyle$Api21Impl:
     private void <init>()
 androidx.core.app.NotificationCompat$CallStyle$Api23Impl:
     private void <init>()
+    static android.app.Notification$Action$Builder createActionBuilder(android.graphics.drawable.Icon,java.lang.CharSequence,android.app.PendingIntent)
 androidx.core.app.NotificationCompat$CallStyle$Api24Impl
 androidx.core.app.NotificationCompat$CallStyle$Api28Impl:
     private void <init>()
 androidx.core.app.NotificationCompat$CallStyle$Api31Impl:
     private void <init>()
+    static android.app.Notification$Action$Builder setAuthenticationRequired(android.app.Notification$Action$Builder,boolean)
 androidx.core.app.NotificationCompat$CallStyle$CallType
 androidx.core.app.NotificationCompat$CallStyle:
     public static final int CALL_TYPE_INCOMING
@@ -1280,6 +1451,8 @@ androidx.core.app.NotificationCompat$DecoratedCustomViewStyle:
     private static final int MAX_ACTION_BUTTONS
     private static final java.lang.String TEMPLATE_CLASS_NAME
     public boolean displayCustomViewInline()
+    public static java.util.List getTextsFromContentView(android.content.Context,android.app.Notification)
+    private static void getTextsFromViewTraversal(android.view.View,java.util.ArrayList)
 androidx.core.app.NotificationCompat$Extender
 androidx.core.app.NotificationCompat$GroupAlertBehavior
 androidx.core.app.NotificationCompat$InboxStyle:
@@ -1355,6 +1528,7 @@ androidx.core.app.NotificationCompat:
     public static final java.lang.String CATEGORY_STOPWATCH
     public static final java.lang.String CATEGORY_SYSTEM
     public static final java.lang.String CATEGORY_TRANSPORT
+    public static final java.lang.String CATEGORY_VOICEMAIL
     public static final java.lang.String CATEGORY_WORKOUT
     public static final int COLOR_DEFAULT
     public static final int DEFAULT_ALL
@@ -1536,8 +1710,18 @@ androidx.core.app.NotificationCompatSideChannelService
 androidx.core.app.NotificationManagerCompat$Api23Impl
 androidx.core.app.NotificationManagerCompat$Api24Impl:
     private void <init>()
+    static int getImportance(android.app.NotificationManager)
 androidx.core.app.NotificationManagerCompat$Api26Impl:
     private void <init>()
+    static void createNotificationChannelGroup(android.app.NotificationManager,android.app.NotificationChannelGroup)
+    static void createNotificationChannelGroups(android.app.NotificationManager,java.util.List)
+    static void createNotificationChannels(android.app.NotificationManager,java.util.List)
+    static void deleteNotificationChannel(android.app.NotificationManager,java.lang.String)
+    static void deleteNotificationChannelGroup(android.app.NotificationManager,java.lang.String)
+    static java.lang.String getId(android.app.NotificationChannel)
+    static java.lang.String getId(android.app.NotificationChannelGroup)
+    static android.app.NotificationChannel getNotificationChannel(android.app.NotificationManager,java.lang.String)
+    static java.util.List getNotificationChannelGroups(android.app.NotificationManager)
 androidx.core.app.NotificationManagerCompat$Api28Impl
 androidx.core.app.NotificationManagerCompat$Api30Impl
 androidx.core.app.NotificationManagerCompat$Api34Impl
@@ -1636,12 +1820,17 @@ androidx.core.app.RemoteActionCompat:
     public android.app.RemoteAction toRemoteAction()
 androidx.core.app.RemoteInput$Api20Impl:
     private void <init>()
+    static void addResultsToIntent(java.lang.Object,android.content.Intent,android.os.Bundle)
     static androidx.core.app.RemoteInput fromPlatform(java.lang.Object)
 androidx.core.app.RemoteInput$Api26Impl:
     private void <init>()
+    static void addDataResultToIntent(androidx.core.app.RemoteInput,android.content.Intent,java.util.Map)
+    static java.util.Set getAllowedDataTypes(java.lang.Object)
+    static java.util.Map getDataResultsFromIntent(android.content.Intent,java.lang.String)
 androidx.core.app.RemoteInput$Api28Impl
 androidx.core.app.RemoteInput$Api29Impl:
     private void <init>()
+    static int getEditChoicesBeforeSending(java.lang.Object)
 androidx.core.app.RemoteInput$Builder:
     public androidx.core.app.RemoteInput$Builder addExtras(android.os.Bundle)
     public android.os.Bundle getExtras()
@@ -1699,6 +1888,8 @@ androidx.core.content.ContentValuesKt
 androidx.core.content.ContextCompat$Api21Impl
 androidx.core.content.ContextCompat$Api23Impl:
     private void <init>()
+    static java.lang.Object getSystemService(android.content.Context,java.lang.Class)
+    static java.lang.String getSystemServiceName(android.content.Context,java.lang.Class)
 androidx.core.content.ContextCompat$Api24Impl
 androidx.core.content.ContextCompat$Api26Impl:
     private void <init>()
@@ -1818,6 +2009,7 @@ androidx.core.content.res.GradientColorInflaterCompat
 androidx.core.content.res.GrowingArrayUtils
 androidx.core.content.res.ResourcesCompat$Api21Impl:
     private void <init>()
+    static android.graphics.drawable.Drawable getDrawableForDensity(android.content.res.Resources,int,int,android.content.res.Resources$Theme)
 androidx.core.content.res.ResourcesCompat$Api23Impl
 androidx.core.content.res.ResourcesCompat$Api29Impl
 androidx.core.content.res.ResourcesCompat$ColorStateListCacheEntry
@@ -1921,6 +2113,13 @@ androidx.core.graphics.drawable.BitmapDrawableKt
 androidx.core.graphics.drawable.ColorDrawableKt
 androidx.core.graphics.drawable.DrawableCompat$Api21Impl:
     private void <init>()
+    static void applyTheme(android.graphics.drawable.Drawable,android.content.res.Resources$Theme)
+    static boolean canApplyTheme(android.graphics.drawable.Drawable)
+    static android.graphics.ColorFilter getColorFilter(android.graphics.drawable.Drawable)
+    static void inflate(android.graphics.drawable.Drawable,android.content.res.Resources,org.xmlpull.v1.XmlPullParser,android.util.AttributeSet,android.content.res.Resources$Theme)
+    static void setHotspot(android.graphics.drawable.Drawable,float,float)
+    static void setHotspotBounds(android.graphics.drawable.Drawable,int,int,int,int)
+    static void setTint(android.graphics.drawable.Drawable,int)
 androidx.core.graphics.drawable.DrawableCompat$Api23Impl
 androidx.core.graphics.drawable.DrawableCompat:
     private static final java.lang.String TAG
@@ -1998,6 +2197,7 @@ androidx.core.graphics.drawable.WrappedDrawableApi14
 androidx.core.graphics.drawable.WrappedDrawableApi21
 androidx.core.graphics.drawable.WrappedDrawableState
 androidx.core.hardware.display.DisplayManagerCompat
+androidx.core.hardware.display.ExperimentalDisplayApi
 androidx.core.hardware.fingerprint.FingerprintManagerCompat$1
 androidx.core.hardware.fingerprint.FingerprintManagerCompat$Api23Impl
 androidx.core.hardware.fingerprint.FingerprintManagerCompat$AuthenticationCallback
@@ -2018,8 +2218,16 @@ androidx.core.location.GnssStatusWrapper
 androidx.core.location.GpsStatusWrapper
 androidx.core.location.LocationCompat$Api26Impl:
     private void <init>()
+    static void removeBearingAccuracy(android.location.Location)
+    static void removeSpeedAccuracy(android.location.Location)
+    static void removeVerticalAccuracy(android.location.Location)
+    static void setBearingAccuracyDegrees(android.location.Location,float)
+    static void setSpeedAccuracyMetersPerSecond(android.location.Location,float)
+    static void setVerticalAccuracyMeters(android.location.Location,float)
 androidx.core.location.LocationCompat$Api28Impl
 androidx.core.location.LocationCompat$Api29Impl
+androidx.core.location.LocationCompat$Api31Impl:
+    private void <init>()
 androidx.core.location.LocationCompat$Api33Impl
 androidx.core.location.LocationCompat$Api34Impl
 androidx.core.location.LocationCompat:
@@ -2029,9 +2237,17 @@ androidx.core.location.LocationCompat:
     public static final java.lang.String EXTRA_MSL_ALTITUDE_ACCURACY
     public static final java.lang.String EXTRA_SPEED_ACCURACY
     public static final java.lang.String EXTRA_VERTICAL_ACCURACY
+    private static java.lang.reflect.Field sFieldsMaskField
+    private static java.lang.Integer sHasBearingAccuracyMask
+    private static java.lang.Integer sHasSpeedAccuracyMask
+    private static java.lang.Integer sHasVerticalAccuracyMask
     private static java.lang.reflect.Method sSetIsFromMockProviderMethod
     private void <init>()
     public static long getElapsedRealtimeNanos(android.location.Location)
+    static java.lang.reflect.Field getFieldsMaskField()
+    static int getHasBearingAccuracyMask()
+    static int getHasSpeedAccuracyMask()
+    static int getHasVerticalAccuracyMask()
     public static float getMslAltitudeAccuracyMeters(android.location.Location)
     public static double getMslAltitudeMeters(android.location.Location)
     private static android.os.Bundle getOrCreateExtras(android.location.Location)
@@ -2057,39 +2273,22 @@ androidx.core.location.LocationListenerCompat:
     public void onStatusChanged(java.lang.String,int,android.os.Bundle)
 androidx.core.location.LocationManagerCompat$Api19Impl:
     private void <init>()
+    static boolean tryRequestLocationUpdates(android.location.LocationManager,java.lang.String,androidx.core.location.LocationRequestCompat,androidx.core.location.LocationManagerCompat$LocationListenerTransport)
 androidx.core.location.LocationManagerCompat$Api24Impl
 androidx.core.location.LocationManagerCompat$Api28Impl
 androidx.core.location.LocationManagerCompat$Api30Impl
 androidx.core.location.LocationManagerCompat$Api31Impl:
     private void <init>()
+    static boolean hasProvider(android.location.LocationManager,java.lang.String)
+    static boolean registerGnssMeasurementsCallback(android.location.LocationManager,java.util.concurrent.Executor,android.location.GnssMeasurementsEvent$Callback)
 androidx.core.location.LocationManagerCompat$CancellableLocationListener
 androidx.core.location.LocationManagerCompat$GnssListenersHolder
 androidx.core.location.LocationManagerCompat$GnssMeasurementsTransport
 androidx.core.location.LocationManagerCompat$GnssStatusTransport
 androidx.core.location.LocationManagerCompat$GpsStatusTransport
 androidx.core.location.LocationManagerCompat$InlineHandlerExecutor
-androidx.core.location.LocationManagerCompat$LocationListenerKey:
-    final androidx.core.location.LocationListenerCompat mListener
-    final java.lang.String mProvider
-    void <init>(java.lang.String,androidx.core.location.LocationListenerCompat)
-    public boolean equals(java.lang.Object)
-    public int hashCode()
-androidx.core.location.LocationManagerCompat$LocationListenerTransport:
-    final java.util.concurrent.Executor mExecutor
-    volatile androidx.core.location.LocationManagerCompat$LocationListenerKey mKey
-    void <init>(androidx.core.location.LocationManagerCompat$LocationListenerKey,java.util.concurrent.Executor)
-    private synthetic void lambda$onFlushComplete$2(int)
-    private synthetic void lambda$onLocationChanged$0(android.location.Location)
-    private synthetic void lambda$onLocationChanged$1(java.util.List)
-    private synthetic void lambda$onProviderDisabled$5(java.lang.String)
-    private synthetic void lambda$onProviderEnabled$4(java.lang.String)
-    private synthetic void lambda$onStatusChanged$3(java.lang.String,int,android.os.Bundle)
-    public void onFlushComplete(int)
-    public void onLocationChanged(android.location.Location)
-    public void onLocationChanged(java.util.List)
-    public void onProviderDisabled(java.lang.String)
-    public void onProviderEnabled(java.lang.String)
-    public void onStatusChanged(java.lang.String,int,android.os.Bundle)
+androidx.core.location.LocationManagerCompat$LocationListenerKey
+androidx.core.location.LocationManagerCompat$LocationListenerTransport
 androidx.core.location.LocationManagerCompat$PreRGnssStatusTransport
 androidx.core.location.LocationManagerCompat:
     private static final long GET_CURRENT_LOCATION_TIMEOUT_MS
@@ -2114,6 +2313,7 @@ androidx.core.location.LocationManagerCompat:
     private static boolean registerGnssStatusCallback(android.location.LocationManager,android.os.Handler,java.util.concurrent.Executor,androidx.core.location.GnssStatusCompat$Callback)
     public static boolean registerGnssStatusCallback(android.location.LocationManager,androidx.core.location.GnssStatusCompat$Callback,android.os.Handler)
     public static boolean registerGnssStatusCallback(android.location.LocationManager,java.util.concurrent.Executor,androidx.core.location.GnssStatusCompat$Callback)
+    static void registerLocationListenerTransport(android.location.LocationManager,androidx.core.location.LocationManagerCompat$LocationListenerTransport)
     public static void removeUpdates(android.location.LocationManager,androidx.core.location.LocationListenerCompat)
     public static void requestLocationUpdates(android.location.LocationManager,java.lang.String,androidx.core.location.LocationRequestCompat,java.util.concurrent.Executor,androidx.core.location.LocationListenerCompat)
     public static void unregisterGnssMeasurementsCallback(android.location.LocationManager,android.location.GnssMeasurementsEvent$Callback)
@@ -2153,6 +2353,10 @@ androidx.core.net.TrafficStatsCompat$Api24Impl
 androidx.core.net.TrafficStatsCompat
 androidx.core.net.UriCompat
 androidx.core.net.UriKt
+androidx.core.os.BufferFillPolicy$Companion
+androidx.core.os.BufferFillPolicy$Discard
+androidx.core.os.BufferFillPolicy$RingBuffer
+androidx.core.os.BufferFillPolicy
 androidx.core.os.BuildCompat$Api30Impl
 androidx.core.os.BuildCompat$PrereleaseSdkCheck
 androidx.core.os.BuildCompat
@@ -2168,6 +2372,7 @@ androidx.core.os.CancellationSignal:
     private void waitForCancelFinishedLocked()
 androidx.core.os.ConfigurationCompat$Api24Impl:
     private void <init>()
+    static void setLocales(android.content.res.Configuration,androidx.core.os.LocaleListCompat)
 androidx.core.os.ConfigurationCompat:
     private void <init>()
     public static void setLocales(android.content.res.Configuration,androidx.core.os.LocaleListCompat)
@@ -2190,9 +2395,13 @@ androidx.core.os.HandlerCompat:
 androidx.core.os.HandlerKt$postAtTime$runnable$1
 androidx.core.os.HandlerKt$postDelayed$runnable$1
 androidx.core.os.HandlerKt
+androidx.core.os.HeapProfileRequestBuilder
+androidx.core.os.JavaHeapDumpRequestBuilder
 androidx.core.os.LocaleListCompat$Api21Impl
 androidx.core.os.LocaleListCompat$Api24Impl:
     private void <init>()
+    static android.os.LocaleList getAdjustedDefault()
+    static android.os.LocaleList getDefault()
 androidx.core.os.LocaleListCompat:
     public static androidx.core.os.LocaleListCompat forLanguageTags(java.lang.String)
     public static androidx.core.os.LocaleListCompat getAdjustedDefault()
@@ -2204,6 +2413,7 @@ androidx.core.os.LocaleListCompat:
     public static boolean matchesLanguageAndScript(java.util.Locale,java.util.Locale)
     public int size()
     public java.lang.String toLanguageTags()
+    public java.lang.Object unwrap()
     public static androidx.core.os.LocaleListCompat wrap(java.lang.Object)
 androidx.core.os.LocaleListCompatWrapper$Api21Impl
 androidx.core.os.LocaleListCompatWrapper:
@@ -2233,6 +2443,7 @@ androidx.core.os.LocaleListPlatformWrapper:
 androidx.core.os.MessageCompat$Api22Impl
 androidx.core.os.MessageCompat
 androidx.core.os.OperationCanceledException
+androidx.core.os.OutcomeReceiverCompat
 androidx.core.os.OutcomeReceiverKt
 androidx.core.os.ParcelCompat$Api29Impl
 androidx.core.os.ParcelCompat$Api30Impl
@@ -2247,6 +2458,13 @@ androidx.core.os.PersistableBundleKt
 androidx.core.os.ProcessCompat$Api19Impl
 androidx.core.os.ProcessCompat$Api24Impl
 androidx.core.os.ProcessCompat
+androidx.core.os.Profiling$registerForAllProfilingResults$1$2
+androidx.core.os.Profiling$registerForAllProfilingResults$1
+androidx.core.os.Profiling
+androidx.core.os.ProfilingRequest
+androidx.core.os.ProfilingRequestBuilder
+androidx.core.os.StackSamplingRequestBuilder
+androidx.core.os.SystemTraceRequestBuilder
 androidx.core.os.TraceCompat$Api29Impl
 androidx.core.os.TraceCompat
 androidx.core.os.TraceKt
@@ -2256,9 +2474,9 @@ androidx.core.os.UserManagerCompat$Api24Impl:
     private void <init>()
 androidx.core.os.UserManagerCompat:
     private void <init>()
-androidx.core.provider.CallbackWithHandler$1
-androidx.core.provider.CallbackWithHandler$2
-androidx.core.provider.CallbackWithHandler
+androidx.core.provider.CallbackWrapper$1
+androidx.core.provider.CallbackWrapper$2
+androidx.core.provider.CallbackWrapper
 androidx.core.provider.CalleeHandler
 androidx.core.provider.DocumentsContractCompat$DocumentCompat
 androidx.core.provider.DocumentsContractCompat$DocumentsContractApi21Impl
@@ -2267,6 +2485,7 @@ androidx.core.provider.DocumentsContractCompat
 androidx.core.provider.FontProvider$ContentQueryWrapper
 androidx.core.provider.FontProvider$ContentQueryWrapperApi16Impl
 androidx.core.provider.FontProvider$ContentQueryWrapperApi24Impl
+androidx.core.provider.FontProvider$ProviderCacheKey
 androidx.core.provider.FontProvider
 androidx.core.provider.FontRequest
 androidx.core.provider.FontRequestWorker$1
@@ -2280,6 +2499,7 @@ androidx.core.provider.FontsContractCompat$FontFamilyResult
 androidx.core.provider.FontsContractCompat$FontInfo
 androidx.core.provider.FontsContractCompat$FontRequestCallback$FontRequestFailReason
 androidx.core.provider.FontsContractCompat$FontRequestCallback
+androidx.core.provider.FontsContractCompat$TypefaceStyle
 androidx.core.provider.FontsContractCompat
 androidx.core.provider.RequestExecutor$DefaultThreadFactory$ProcessPriorityThread
 androidx.core.provider.RequestExecutor$DefaultThreadFactory
@@ -2500,13 +2720,19 @@ androidx.core.view.DisplayCompat$ModeCompat
 androidx.core.view.DisplayCompat
 androidx.core.view.DisplayCutoutCompat$Api28Impl:
     private void <init>()
+    static android.view.DisplayCutout createDisplayCutout(android.graphics.Rect,java.util.List)
+    static java.util.List getBoundingRects(android.view.DisplayCutout)
 androidx.core.view.DisplayCutoutCompat$Api29Impl
 androidx.core.view.DisplayCutoutCompat$Api30Impl
+androidx.core.view.DisplayCutoutCompat$Api31Impl
+androidx.core.view.DisplayCutoutCompat$Api33Impl
 androidx.core.view.DisplayCutoutCompat:
     public void <init>(android.graphics.Rect,java.util.List)
     public void <init>(androidx.core.graphics.Insets,android.graphics.Rect,android.graphics.Rect,android.graphics.Rect,android.graphics.Rect,androidx.core.graphics.Insets)
-    private static android.view.DisplayCutout constructDisplayCutout(androidx.core.graphics.Insets,android.graphics.Rect,android.graphics.Rect,android.graphics.Rect,android.graphics.Rect,androidx.core.graphics.Insets)
+    public void <init>(androidx.core.graphics.Insets,android.graphics.Rect,android.graphics.Rect,android.graphics.Rect,android.graphics.Rect,androidx.core.graphics.Insets,android.graphics.Path)
+    private static android.view.DisplayCutout constructDisplayCutout(androidx.core.graphics.Insets,android.graphics.Rect,android.graphics.Rect,android.graphics.Rect,android.graphics.Rect,androidx.core.graphics.Insets,android.graphics.Path)
     public java.util.List getBoundingRects()
+    public android.graphics.Path getCutoutPath()
     public androidx.core.graphics.Insets getWaterfallInsets()
     android.view.DisplayCutout unwrap()
 androidx.core.view.DragAndDropPermissionsCompat$Api24Impl
@@ -2551,12 +2777,18 @@ androidx.core.view.NestedScrollingParent2
 androidx.core.view.NestedScrollingParent3
 androidx.core.view.NestedScrollingParent
 androidx.core.view.NestedScrollingParentHelper
+androidx.core.view.OnApplyWindowInsetsListener
 androidx.core.view.OnReceiveContentListener
 androidx.core.view.OnReceiveContentViewBehavior:
     public abstract androidx.core.view.ContentInfoCompat onReceiveContent(androidx.core.view.ContentInfoCompat)
 androidx.core.view.PointerIconCompat$Api24Impl
 androidx.core.view.PointerIconCompat
 androidx.core.view.ScaleGestureDetectorCompat
+androidx.core.view.ScrollFeedbackProviderCompat$1
+androidx.core.view.ScrollFeedbackProviderCompat$ScrollFeedbackProviderApi35Impl
+androidx.core.view.ScrollFeedbackProviderCompat$ScrollFeedbackProviderBaseImpl
+androidx.core.view.ScrollFeedbackProviderCompat$ScrollFeedbackProviderImpl
+androidx.core.view.ScrollFeedbackProviderCompat
 androidx.core.view.ScrollingView
 androidx.core.view.SoftwareKeyboardControllerCompat$Impl20:
     void hide()
@@ -2603,16 +2835,59 @@ androidx.core.view.ViewCompat$AccessibilityViewProperty:
     boolean shouldUpdate(java.lang.Object,java.lang.Object)
 androidx.core.view.ViewCompat$Api20Impl:
     private void <init>()
+androidx.core.view.ViewCompat$Api21Impl$1
 androidx.core.view.ViewCompat$Api21Impl:
     private void <init>()
+    static void callCompatInsetAnimationCallback(android.view.WindowInsets,android.view.View)
+    static androidx.core.view.WindowInsetsCompat computeSystemWindowInsets(android.view.View,androidx.core.view.WindowInsetsCompat,android.graphics.Rect)
+    static boolean dispatchNestedFling(android.view.View,float,float,boolean)
+    static boolean dispatchNestedPreFling(android.view.View,float,float)
+    static boolean dispatchNestedPreScroll(android.view.View,int,int,int[],int[])
+    static boolean dispatchNestedScroll(android.view.View,int,int,int,int,int[])
+    static android.content.res.ColorStateList getBackgroundTintList(android.view.View)
+    static android.graphics.PorterDuff$Mode getBackgroundTintMode(android.view.View)
+    static float getElevation(android.view.View)
+    static float getTranslationZ(android.view.View)
+    static float getZ(android.view.View)
+    static boolean hasNestedScrollingParent(android.view.View)
+    static boolean isImportantForAccessibility(android.view.View)
+    static boolean isNestedScrollingEnabled(android.view.View)
+    static void setBackgroundTintList(android.view.View,android.content.res.ColorStateList)
+    static void setBackgroundTintMode(android.view.View,android.graphics.PorterDuff$Mode)
+    static void setElevation(android.view.View,float)
+    static void setNestedScrollingEnabled(android.view.View,boolean)
+    static void setOnApplyWindowInsetsListener(android.view.View,androidx.core.view.OnApplyWindowInsetsListener)
+    static void setTranslationZ(android.view.View,float)
+    static void setZ(android.view.View,float)
+    static boolean startNestedScroll(android.view.View,int)
+    static void stopNestedScroll(android.view.View)
 androidx.core.view.ViewCompat$Api23Impl:
     private void <init>()
+    static int getScrollIndicators(android.view.View)
+    static void setScrollIndicators(android.view.View,int)
+    static void setScrollIndicators(android.view.View,int,int)
 androidx.core.view.ViewCompat$Api24Impl
 androidx.core.view.ViewCompat$Api26Impl
 androidx.core.view.ViewCompat$Api28Impl:
     private void <init>()
+    static void addOnUnhandledKeyEventListener(android.view.View,androidx.core.view.ViewCompat$OnUnhandledKeyEventListenerCompat)
+    static boolean isAccessibilityHeading(android.view.View)
+    static boolean isScreenReaderFocusable(android.view.View)
+    static void removeOnUnhandledKeyEventListener(android.view.View,androidx.core.view.ViewCompat$OnUnhandledKeyEventListenerCompat)
+    static java.lang.Object requireViewById(android.view.View,int)
+    static void setAccessibilityHeading(android.view.View,boolean)
+    static void setAccessibilityPaneTitle(android.view.View,java.lang.CharSequence)
+    public static void setAutofillId(android.view.View,androidx.core.view.autofill.AutofillIdCompat)
+    static void setScreenReaderFocusable(android.view.View,boolean)
 androidx.core.view.ViewCompat$Api29Impl
-androidx.core.view.ViewCompat$Api30Impl
+androidx.core.view.ViewCompat$Api30Impl:
+    private void <init>()
+    static int getImportantForContentCapture(android.view.View)
+    static java.lang.CharSequence getStateDescription(android.view.View)
+    public static androidx.core.view.WindowInsetsControllerCompat getWindowInsetsController(android.view.View)
+    static boolean isImportantForContentCapture(android.view.View)
+    static void setImportantForContentCapture(android.view.View,int)
+    static void setStateDescription(android.view.View,java.lang.CharSequence)
 androidx.core.view.ViewCompat$Api31Impl
 androidx.core.view.ViewCompat$FocusDirection
 androidx.core.view.ViewCompat$FocusRealDirection
@@ -2676,6 +2951,7 @@ androidx.core.view.ViewCompat:
     private static void addAccessibilityAction(android.view.View,androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat)
     public static void addKeyboardNavigationClusters(android.view.View,java.util.Collection,int)
     public static void addOnUnhandledKeyEventListener(android.view.View,androidx.core.view.ViewCompat$OnUnhandledKeyEventListenerCompat)
+    public static void addOverlayView(android.view.ViewGroup,android.view.View)
     public static androidx.core.view.ViewPropertyAnimatorCompat animate(android.view.View)
     private static void bindTempDetach()
     public static boolean canScrollHorizontally(android.view.View,int)
@@ -2696,6 +2972,7 @@ androidx.core.view.ViewCompat:
     public static void dispatchStartTemporaryDetach(android.view.View)
     public static void enableAccessibleClickableSpanSupport(android.view.View)
     static void ensureAccessibilityDelegateCompat(android.view.View)
+    static void fallbackTransformMatrixToGlobal(android.view.View,android.graphics.Matrix)
     public static int generateViewId()
     public static androidx.core.view.AccessibilityDelegateCompat getAccessibilityDelegate(android.view.View)
     private static android.view.View$AccessibilityDelegate getAccessibilityDelegateInternal(android.view.View)
@@ -2858,6 +3135,7 @@ androidx.core.view.ViewCompat:
     public static void stopNestedScroll(android.view.View)
     public static void stopNestedScroll(android.view.View,int)
     private static void tickleInvalidationFlag(android.view.View)
+    public static void transformMatrixToGlobal(android.view.View,android.graphics.Matrix)
     public static void updateDragShadow(android.view.View,android.view.View$DragShadowBuilder)
 androidx.core.view.ViewConfigurationCompat$Api26Impl
 androidx.core.view.ViewConfigurationCompat$Api28Impl
@@ -2865,12 +3143,16 @@ androidx.core.view.ViewConfigurationCompat$Api34Impl
 androidx.core.view.ViewConfigurationCompat
 androidx.core.view.ViewGroupCompat$Api21Impl:
     private void <init>()
+    static int getNestedScrollAxes(android.view.ViewGroup)
+    static void setTransitionGroup(android.view.ViewGroup,boolean)
 androidx.core.view.ViewGroupCompat:
     public static final int LAYOUT_MODE_CLIP_BOUNDS
     public static final int LAYOUT_MODE_OPTICAL_BOUNDS
     private void <init>()
     public static int getLayoutMode(android.view.ViewGroup)
     public static int getNestedScrollAxes(android.view.ViewGroup)
+    public static void installCompatInsetsDispatch(android.view.View)
+    private static synthetic android.view.WindowInsets lambda$installCompatInsetsDispatch$0(android.view.View,android.view.WindowInsets)
     public static boolean onRequestSendAccessibilityEvent(android.view.ViewGroup,android.view.View,android.view.accessibility.AccessibilityEvent)
     public static void setLayoutMode(android.view.ViewGroup,int)
     public static void setMotionEventSplittingEnabled(android.view.ViewGroup,boolean)
@@ -2902,6 +3184,7 @@ androidx.core.view.ViewStructureCompat
 androidx.core.view.WindowCompat$Api16Impl
 androidx.core.view.WindowCompat$Api28Impl
 androidx.core.view.WindowCompat$Api30Impl
+androidx.core.view.WindowCompat$Api35Impl
 androidx.core.view.WindowCompat
 androidx.core.view.WindowInsetsAnimationCompat$BoundsCompat
 androidx.core.view.WindowInsetsAnimationCompat$Callback$DispatchMode
@@ -2940,21 +3223,31 @@ androidx.core.view.WindowInsetsCompat$BuilderImpl30:
     void setInsets(int,androidx.core.graphics.Insets)
     void setInsetsIgnoringVisibility(int,androidx.core.graphics.Insets)
     void setVisible(int,boolean)
+androidx.core.view.WindowInsetsCompat$BuilderImpl34:
+    void <init>(androidx.core.view.WindowInsetsCompat)
+    void setInsets(int,androidx.core.graphics.Insets)
+    void setInsetsIgnoringVisibility(int,androidx.core.graphics.Insets)
+    void setVisible(int,boolean)
 androidx.core.view.WindowInsetsCompat$BuilderImpl:
     void setDisplayCutout(androidx.core.view.DisplayCutoutCompat)
     void setInsets(int,androidx.core.graphics.Insets)
     void setInsetsIgnoringVisibility(int,androidx.core.graphics.Insets)
     void setVisible(int,boolean)
 androidx.core.view.WindowInsetsCompat$Impl20:
+    private static final int SYSTEM_BAR_VISIBILITY_MASK
     public androidx.core.graphics.Insets getInsetsIgnoringVisibility(int)
     androidx.core.view.WindowInsetsCompat inset(int,int,int,int)
 androidx.core.view.WindowInsetsCompat$Impl29:
     androidx.core.view.WindowInsetsCompat inset(int,int,int,int)
 androidx.core.view.WindowInsetsCompat$Impl30:
     public androidx.core.graphics.Insets getInsetsIgnoringVisibility(int)
+androidx.core.view.WindowInsetsCompat$Impl34:
+    public androidx.core.graphics.Insets getInsetsIgnoringVisibility(int)
 androidx.core.view.WindowInsetsCompat$Impl:
     androidx.core.graphics.Insets getInsetsIgnoringVisibility(int)
     androidx.core.view.WindowInsetsCompat inset(int,int,int,int)
+androidx.core.view.WindowInsetsCompat$Side$InsetsSide
+androidx.core.view.WindowInsetsCompat$Side
 androidx.core.view.WindowInsetsCompat$Type$InsetsType
 androidx.core.view.WindowInsetsCompat$Type:
     static final int CAPTION_BAR
@@ -2967,12 +3260,16 @@ androidx.core.view.WindowInsetsCompat$Type:
     static final int SIZE
     static final int STATUS_BARS
     static final int SYSTEM_GESTURES
+    static final int SYSTEM_OVERLAYS
     static final int TAPPABLE_ELEMENT
     static final int WINDOW_DECOR
     private void <init>()
     static int all()
     public static int systemBars()
+    public static int systemOverlays()
 androidx.core.view.WindowInsetsCompat$TypeImpl30:
+    private void <init>()
+androidx.core.view.WindowInsetsCompat$TypeImpl34:
     private void <init>()
 androidx.core.view.WindowInsetsCompat:
     private static final java.lang.String TAG
@@ -3024,7 +3321,16 @@ androidx.core.view.WindowInsetsControllerCompat$Impl30:
     void removeOnControllableInsetsChangedListener(androidx.core.view.WindowInsetsControllerCompat$OnControllableInsetsChangedListener)
     void setSystemBarsBehavior(int)
     void show(int)
+androidx.core.view.WindowInsetsControllerCompat$Impl31:
+    void <init>(android.view.WindowInsetsController,androidx.core.view.WindowInsetsControllerCompat,androidx.core.view.SoftwareKeyboardControllerCompat)
+    int getSystemBarsBehavior()
+    void setSystemBarsBehavior(int)
+androidx.core.view.WindowInsetsControllerCompat$Impl35:
+    void <init>(android.view.WindowInsetsController,androidx.core.view.WindowInsetsControllerCompat,androidx.core.view.SoftwareKeyboardControllerCompat)
+    public boolean isAppearanceLightNavigationBars()
+    public boolean isAppearanceLightStatusBars()
 androidx.core.view.WindowInsetsControllerCompat$Impl:
+    static final int KEY_BEHAVIOR
     void addOnControllableInsetsChangedListener(androidx.core.view.WindowInsetsControllerCompat$OnControllableInsetsChangedListener)
     void controlWindowInsetsAnimation(int,long,android.view.animation.Interpolator,android.os.CancellationSignal,androidx.core.view.WindowInsetsAnimationControlListenerCompat)
     int getSystemBarsBehavior()
@@ -3063,10 +3369,11 @@ androidx.core.view.accessibility.AccessibilityManagerCompat$TouchExplorationStat
 androidx.core.view.accessibility.AccessibilityManagerCompat$TouchExplorationStateChangeListenerWrapper
 androidx.core.view.accessibility.AccessibilityManagerCompat
 androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat
-androidx.core.view.accessibility.AccessibilityNodeInfoCompat$Api21Impl
 androidx.core.view.accessibility.AccessibilityNodeInfoCompat$Api30Impl
 androidx.core.view.accessibility.AccessibilityNodeInfoCompat$Api33Impl
 androidx.core.view.accessibility.AccessibilityNodeInfoCompat$Api34Impl
+androidx.core.view.accessibility.AccessibilityNodeInfoCompat$Api35Impl
+androidx.core.view.accessibility.AccessibilityNodeInfoCompat$CollectionInfoCompat$Builder
 androidx.core.view.accessibility.AccessibilityNodeInfoCompat$CollectionInfoCompat
 androidx.core.view.accessibility.AccessibilityNodeInfoCompat$CollectionItemInfoCompat$Builder
 androidx.core.view.accessibility.AccessibilityNodeInfoCompat$CollectionItemInfoCompat
@@ -3096,15 +3403,15 @@ androidx.core.view.accessibility.AccessibilityWindowInfoCompat
 androidx.core.view.animation.PathInterpolatorApi14
 androidx.core.view.animation.PathInterpolatorCompat$Api21Impl
 androidx.core.view.animation.PathInterpolatorCompat
-androidx.core.view.autofill.AutofillIdCompat:
-    private final java.lang.Object mWrappedObj
-    private void <init>(android.view.autofill.AutofillId)
-    public static androidx.core.view.autofill.AutofillIdCompat toAutofillIdCompat(android.view.autofill.AutofillId)
+androidx.core.view.autofill.AutofillIdCompat
 androidx.core.view.contentcapture.ContentCaptureSessionCompat$Api23Impl
 androidx.core.view.contentcapture.ContentCaptureSessionCompat$Api29Impl
 androidx.core.view.contentcapture.ContentCaptureSessionCompat$Api34Impl
 androidx.core.view.contentcapture.ContentCaptureSessionCompat
 androidx.core.view.inputmethod.EditorInfoCompat$Api30Impl
+androidx.core.view.inputmethod.EditorInfoCompat$Api35Impl:
+    private void <init>()
+    static boolean isStylusHandwritingEnabled(android.view.inputmethod.EditorInfo)
 androidx.core.view.inputmethod.EditorInfoCompat:
     private static final java.lang.String CONTENT_MIME_TYPES_INTEROP_KEY
     private static final java.lang.String CONTENT_MIME_TYPES_KEY
@@ -3115,7 +3422,7 @@ androidx.core.view.inputmethod.EditorInfoCompat:
     public static final int IME_FLAG_NO_PERSONALIZED_LEARNING
     static final int MAX_INITIAL_SELECTION_LENGTH
     static final int MEMORY_EFFICIENT_TEXT_LENGTH
-    private static final java.lang.String STYLUS_HANDWRITING_ENABLED_KEY
+    static final java.lang.String STYLUS_HANDWRITING_ENABLED_KEY
     public void <init>()
     public static java.lang.String[] getContentMimeTypes(android.view.inputmethod.EditorInfo)
     public static java.lang.CharSequence getInitialSelectedText(android.view.inputmethod.EditorInfo,int)
@@ -3138,6 +3445,21 @@ androidx.core.view.inputmethod.InputContentInfoCompat$InputContentInfoCompatApi2
 androidx.core.view.inputmethod.InputContentInfoCompat$InputContentInfoCompatBaseImpl
 androidx.core.view.inputmethod.InputContentInfoCompat$InputContentInfoCompatImpl
 androidx.core.view.inputmethod.InputContentInfoCompat
+androidx.core.view.insets.ColorProtection
+androidx.core.view.insets.GradientProtection
+androidx.core.view.insets.Protection$Attributes$Callback
+androidx.core.view.insets.Protection$Attributes
+androidx.core.view.insets.Protection
+androidx.core.view.insets.ProtectionGroup
+androidx.core.view.insets.ProtectionLayout$1
+androidx.core.view.insets.ProtectionLayout
+androidx.core.view.insets.SystemBarStateMonitor$1
+androidx.core.view.insets.SystemBarStateMonitor$2
+androidx.core.view.insets.SystemBarStateMonitor$Callback
+androidx.core.view.insets.SystemBarStateMonitor
+androidx.core.viewtree.R$id
+androidx.core.viewtree.R
+androidx.core.viewtree.ViewTree
 androidx.core.widget.AutoScrollHelper$ClampedScroller
 androidx.core.widget.AutoScrollHelper$ScrollAnimationRunnable
 androidx.core.widget.AutoScrollHelper
@@ -3158,6 +3480,7 @@ androidx.core.widget.ListViewAutoScrollHelper
 androidx.core.widget.ListViewCompat
 androidx.core.widget.NestedScrollView$AccessibilityDelegate
 androidx.core.widget.NestedScrollView$Api21Impl
+androidx.core.widget.NestedScrollView$Api35Impl
 androidx.core.widget.NestedScrollView$DifferentialMotionFlingTargetImpl
 androidx.core.widget.NestedScrollView$OnScrollChangeListener
 androidx.core.widget.NestedScrollView$SavedState$1
@@ -8509,6 +8832,9 @@ com.google.gson.stream.MalformedJsonException:
     private static final long serialVersionUID
     public void <init>(java.lang.String,java.lang.Throwable)
     public void <init>(java.lang.Throwable)
+dev.fluttercommunity.plus.packageinfo.PackageInfoPlugin:
+    private static final java.lang.String CHANNEL_NAME
+dev.fluttercommunity.plus.packageinfo.R
 dev.fluttercommunity.workmanager.BackgroundWorker:
     public static final java.lang.String DART_TASK_KEY
     public static final java.lang.String PAYLOAD_KEY
@@ -9095,7 +9421,6 @@ kotlin.collections.ArraysKt___ArraysJvmKt:
     public static final char[] copyInto(char[],char[],int,int,int)
     public static final double[] copyInto(double[],double[],int,int,int)
     public static final float[] copyInto(float[],float[],int,int,int)
-    public static final int[] copyInto(int[],int[],int,int,int)
     public static final long[] copyInto(long[],long[],int,int,int)
     public static final short[] copyInto(short[],short[],int,int,int)
     public static final boolean[] copyInto(boolean[],boolean[],int,int,int)
@@ -9103,7 +9428,6 @@ kotlin.collections.ArraysKt___ArraysJvmKt:
     public static synthetic char[] copyInto$default(char[],char[],int,int,int,int,java.lang.Object)
     public static synthetic double[] copyInto$default(double[],double[],int,int,int,int,java.lang.Object)
     public static synthetic float[] copyInto$default(float[],float[],int,int,int,int,java.lang.Object)
-    public static synthetic int[] copyInto$default(int[],int[],int,int,int,int,java.lang.Object)
     public static synthetic long[] copyInto$default(long[],long[],int,int,int,int,java.lang.Object)
     public static synthetic short[] copyInto$default(short[],short[],int,int,int,int,java.lang.Object)
     public static synthetic boolean[] copyInto$default(boolean[],boolean[],int,int,int,int,java.lang.Object)
@@ -9704,7 +10028,6 @@ kotlin.collections.ArraysKt___ArraysKt:
     public static final int first(int[],kotlin.jvm.functions.Function1)
     public static final long first(long[])
     public static final long first(long[],kotlin.jvm.functions.Function1)
-    public static final java.lang.Object first(java.lang.Object[])
     public static final java.lang.Object first(java.lang.Object[],kotlin.jvm.functions.Function1)
     public static final short first(short[])
     public static final short first(short[],kotlin.jvm.functions.Function1)
@@ -16265,7 +16588,7 @@ android.support.v4.media.RatingCompat$1:
 android.support.v4.media.session.IMediaSession$Stub$Proxy
 android.support.v4.media.session.IMediaSession$Stub
 android.support.v4.media.session.IMediaSession
-android.support.v4.media.session.MediaControllerCompat$MediaControllerImplApi21$ExtraBinderRequestResultReceiver$$InternalSyntheticThrowCCEIfNotNull$39$324faaaf24f44e7b222fa97e7c4156f4b928294cecafac6be389931969a82e8d$0
+android.support.v4.media.session.MediaControllerCompat$MediaControllerImplApi21$ExtraBinderRequestResultReceiver$$InternalSyntheticThrowCCEIfNotNull$43$324faaaf24f44e7b222fa97e7c4156f4b928294cecafac6be389931969a82e8d$0
 android.support.v4.media.session.MediaControllerCompat$MediaControllerImplApi21$ExtraBinderRequestResultReceiver:
     public java.lang.ref.WeakReference mMediaControllerImpl
 android.support.v4.media.session.MediaControllerCompat$MediaControllerImplApi21
@@ -16442,38 +16765,36 @@ androidx.arch.core.internal.SafeIterableMap:
     public final androidx.arch.core.internal.SafeIterableMap$Entry put(java.lang.Object,java.lang.Object)
     public java.lang.Object putIfAbsent(java.lang.Object,java.lang.Object)
     public static int size()
-androidx.collection.ArrayMap:
-    public final androidx.collection.MapCollections getCollection()
-    public static boolean retainAll()
+androidx.collection.ArrayMap$MapIterator:
+    public static java.util.Map$Entry next()
 androidx.collection.ArraySet:
     public static void ensureCapacity()
+    public static java.lang.Object[] getArray$collection()
+    public static int[] getHashes$collection()
+    public final int getSize()
+    public static int get_size$collection()
     public final int indexOf(java.lang.Object)
+    public static void setArray$collection()
+    public static void setHashes$collection()
+    public static void set_size$collection()
     public static java.lang.Object valueAt()
-androidx.collection.ContainerHelpers:
-    public static final long[] EMPTY_LONGS
-    public static boolean equal(java.lang.Object,java.lang.Object)
-androidx.collection.MapCollections$EntrySet:
-    public static boolean add()
-androidx.collection.MapCollections$MapIterator:
-    public static java.util.Map$Entry next()
-androidx.collection.MapCollections:
-    public abstract java.util.Set getEntrySet()
-    public final androidx.collection.MapCollections$KeySet getKeySet()
-    public abstract java.util.Collection getValues()
-    public final java.lang.Object[] toArrayHelper(int)
+androidx.collection.ArraySetJvmUtil
+androidx.collection.ArraySetKt:
+    public static final int indexOfNull(androidx.collection.ArraySet)
 androidx.collection.SimpleArrayMap:
-    public static int binarySearchHashes(int[],int,int)
+    public void <init>()
+    public synthetic void <init>(java.lang.Object)
     public static void ensureCapacity()
-    public final java.lang.Object keyAt(int)
-    public final java.lang.Object setValueAt(int,java.lang.Object)
 androidx.collection.SparseArrayCompat:
-    public boolean mGarbage
+    public synthetic boolean garbage
     public static void clear()
     public static androidx.collection.SparseArrayCompat clone()
-    public final void gc()
-    public final int keyAt(int)
-    public final int size()
-    public final java.lang.Object valueAt(int)
+    public static int keyAt()
+    public static int size()
+    public static java.lang.Object valueAt()
+androidx.collection.SparseArrayCompatKt
+androidx.collection.internal.ContainerHelpersKt:
+    public static final long[] EMPTY_LONGS
 androidx.concurrent.futures.AbstractResolvableFuture$$InternalSyntheticThrowCCEIfNotNull$15$55dea8fb21d2d9b463eef9ac6e0028a5ce984ce53c3e30d133ce76e755bdaf0a$0
 androidx.concurrent.futures.AbstractResolvableFuture$$InternalSyntheticThrowCCEIfNotNull$27$1c3a97020e5d8ba432870127fac478e1919a76bbbbeea4542d7e48788773e2a5$0
 androidx.concurrent.futures.AbstractResolvableFuture$$InternalSyntheticThrowCCEIfNotNull$29$5468c06d8017681e6113cc82283d8dd430c2c54f59efafb379e08cf867058ebd$0
@@ -16514,6 +16835,10 @@ androidx.core.R$integer
 androidx.core.R$layout
 androidx.core.R$string
 androidx.core.app.ActivityCompat$1
+androidx.core.app.ActivityCompat$Api21Impl
+androidx.core.app.ActivityCompat$Api23Impl
+androidx.core.app.ActivityCompat$Api31Impl
+androidx.core.app.ActivityCompat$Api32Impl
 androidx.core.app.ActivityCompat$OnRequestPermissionsResultCallback
 androidx.core.app.ActivityCompat$PermissionCompatDelegate
 androidx.core.app.ActivityCompat$SharedElementCallback21Impl$$InternalSyntheticLambda$1$00ee4e62015a653937e2455e2a9906027242ef3469acb4df215c91d65b465866$0
@@ -16521,10 +16846,14 @@ androidx.core.app.ActivityCompat$SharedElementCallback21Impl
 androidx.core.app.ActivityCompat:
     public static androidx.core.app.ActivityCompat$PermissionCompatDelegate sDelegate
 androidx.core.app.ActivityOptionsCompat
+androidx.core.app.AlarmManagerCompat$Api21Impl
+androidx.core.app.AlarmManagerCompat$Api23Impl
 androidx.core.app.AlarmManagerCompat
+androidx.core.app.AppOpsManagerCompat$Api23Impl
+androidx.core.app.AppOpsManagerCompat$Api29Impl
 androidx.core.app.AppOpsManagerCompat
 androidx.core.app.BundleCompat
-androidx.core.app.ComponentActivity$$InternalSyntheticThrowCCEIfNotNull$25$c52a63c170f0c5d26e139227b25a3bfaba89cf57e2edc403a6856767fa377046$0
+androidx.core.app.ComponentActivity$$InternalSyntheticThrowCCEIfNotNull$31$c52a63c170f0c5d26e139227b25a3bfaba89cf57e2edc403a6856767fa377046$0
 androidx.core.app.CoreComponentFactory$$InternalSyntheticThrowCCEIfNotNull$13$28d6d52be828bd520f37653069cdb0fd59ddc413967dd43deec606fddf5e864e$0
 androidx.core.app.CoreComponentFactory$CompatWrapped
 androidx.core.app.MultiWindowModeChangedInfo:
@@ -16664,6 +16993,10 @@ androidx.core.app.NotificationCompat$Style:
     public void makeHeadsUpContentView()
     public abstract void setBuilder(androidx.core.app.NotificationCompat$Builder)
 androidx.core.app.NotificationCompat
+androidx.core.app.NotificationCompatBuilder$Api20Impl
+androidx.core.app.NotificationCompatBuilder$Api21Impl
+androidx.core.app.NotificationCompatBuilder$Api23Impl
+androidx.core.app.NotificationCompatBuilder$Api24Impl
 androidx.core.app.NotificationCompatBuilder:
     public final java.util.ArrayList mActionExtrasList
     public android.widget.RemoteViews mBigContentView
@@ -16675,6 +17008,7 @@ androidx.core.app.NotificationCompatBuilder:
     public static android.content.Context getContext()
     public static void removeSoundAndVibration(android.app.Notification)
 androidx.core.app.NotificationCompatJellybean
+androidx.core.app.NotificationManagerCompat$Api24Impl
 androidx.core.app.NotificationManagerCompat$CancelTask
 androidx.core.app.NotificationManagerCompat$SideChannelManager:
     public final android.os.HandlerThread mHandlerThread
@@ -16702,6 +17036,7 @@ androidx.core.app.Person:
 androidx.core.app.PictureInPictureModeChangedInfo:
     public android.content.res.Configuration newConfiguration
     public static boolean isInPictureInPictureMode()
+androidx.core.app.RemoteInput$Api20Impl
 androidx.core.app.RemoteInput$Builder
 androidx.core.app.RemoteInput:
     public final int mEditChoicesBeforeSending
@@ -16723,6 +17058,8 @@ androidx.core.app.SharedElementCallback:
     public abstract void onSharedElementEnd()
     public abstract void onSharedElementStart()
     public abstract void onSharedElementsArrived()
+androidx.core.content.ContextCompat$$InternalSyntheticApiModelOutline$1$a2e96450dad8b1602d9f52babbc1b2091ec12ee56543544b624eab253a04483c$0
+androidx.core.content.ContextCompat$Api23Impl
 androidx.core.content.ContextCompat:
     public static final java.lang.Object sSync
     static void <clinit>()
@@ -16731,12 +17068,16 @@ androidx.core.content.LocusIdCompat
 androidx.core.content.PermissionChecker
 androidx.core.content.res.ResourcesCompat$Api21Impl
 androidx.core.content.res.ResourcesCompat
+androidx.core.graphics.Insets$Api29Impl
 androidx.core.graphics.Insets:
     public static androidx.core.graphics.Insets of(android.graphics.Rect)
-androidx.core.graphics.drawable.DrawableCompat$$InternalSyntheticThrowCCEIfNotNull$13$27b9fd16146e67f1b23f7a77a2ed977e27b748c227ca02f64a91ee95a1696b31$0
-androidx.core.graphics.drawable.DrawableCompat$$InternalSyntheticThrowCCEIfNotNull$13$2c2e1cfa19936b873b17852695b1831d31319d72f3848cdecad6ac25f01e88fb$0
+    public final android.graphics.Insets toPlatformInsets()
+androidx.core.graphics.drawable.DrawableCompat$$InternalSyntheticThrowCCEIfNotNull$15$27b9fd16146e67f1b23f7a77a2ed977e27b748c227ca02f64a91ee95a1696b31$0
+androidx.core.graphics.drawable.DrawableCompat$$InternalSyntheticThrowCCEIfNotNull$15$2c2e1cfa19936b873b17852695b1831d31319d72f3848cdecad6ac25f01e88fb$0
 androidx.core.graphics.drawable.DrawableCompat$Api21Impl
 androidx.core.graphics.drawable.DrawableCompat
+androidx.core.graphics.drawable.IconCompat$Api26Impl:
+    public static android.graphics.drawable.Drawable createAdaptiveIconDrawable(android.graphics.drawable.BitmapDrawable)
 androidx.core.graphics.drawable.IconCompat:
     public static void checkResource()
     public static androidx.core.graphics.drawable.IconCompat createWithContentUri(java.lang.String)
@@ -16749,15 +17090,11 @@ androidx.core.graphics.drawable.IconCompat:
     public static void onPreParceling()
     public final android.os.Bundle toBundle()
     public static android.graphics.drawable.Icon toIcon()
-    public static android.graphics.drawable.Icon toIcon$1()
 androidx.core.graphics.drawable.TintAwareDrawable
-androidx.core.location.LocationCompat:
-    public static boolean containsExtra(android.location.Location,java.lang.String)
-androidx.core.location.LocationManagerCompat$$InternalSyntheticThrowCCEIfNotNull$15$34c02d892fcb9b619a0c2abd241e01d4bb980a48b321195bc5a1f315a619f043$0
-androidx.core.location.LocationManagerCompat$LocationListenerKey
-androidx.core.location.LocationManagerCompat$LocationListenerTransport:
-    public abstract androidx.core.location.LocationManagerCompat$LocationListenerKey getKey()
-    public abstract void unregister()
+androidx.core.location.LocationCompat
+androidx.core.location.LocationListenerCompat
+androidx.core.location.LocationManagerCompat:
+    public static final java.util.WeakHashMap sLocationListeners
 androidx.core.location.LocationRequestCompat$Api19Impl:
     public static java.lang.reflect.Method sSetExpireInMethod
     public static java.lang.reflect.Method sSetNumUpdatesMethod
@@ -16775,9 +17112,7 @@ androidx.core.location.LocationRequestCompat:
     public static int getQuality()
     public static android.location.LocationRequest toLocationRequest()
 androidx.core.net.ConnectivityManagerCompat
-androidx.core.os.BundleApi21ImplKt:
-    public static final androidx.core.os.BundleApi21ImplKt INSTANCE
-    static void <clinit>()
+androidx.core.os.BundleApi21ImplKt
 androidx.core.os.BundleKt
 androidx.core.os.CancellationSignal$OnCancelListener
 androidx.core.os.CancellationSignal:
@@ -16785,17 +17120,18 @@ androidx.core.os.CancellationSignal:
     public java.lang.Object mCancellationSignalObj
     public androidx.core.os.CancellationSignal$OnCancelListener mOnCancelListener
     public static void cancel()
+androidx.core.os.ConfigurationCompat$Api24Impl
 androidx.core.os.ConfigurationCompat
 androidx.core.os.ExecutorCompat
 androidx.core.os.HandlerCompat
+androidx.core.os.LocaleListCompat$Api24Impl
 androidx.core.os.LocaleListCompat:
     public final androidx.core.os.LocaleListPlatformWrapper mImpl
     public static final androidx.core.os.LocaleListCompat sEmptyLocaleList
     public void <init>(androidx.core.os.LocaleListPlatformWrapper)
     public static java.util.Locale get()
-    public static java.lang.Object unwrap()
     public static androidx.core.os.LocaleListCompat wrap(android.os.LocaleList)
-androidx.core.os.LocaleListCompatWrapper$$InternalSyntheticThrowCCEIfNotNull$282$eabde584e09f5dbef5e5c77b987ffae1119ec566c4556bde1e78e256d6ae9d7b$0
+androidx.core.os.LocaleListCompatWrapper$$InternalSyntheticThrowCCEIfNotNull$280$eabde584e09f5dbef5e5c77b987ffae1119ec566c4556bde1e78e256d6ae9d7b$0
 androidx.core.os.LocaleListCompatWrapper
 androidx.core.os.LocaleListInterface
 androidx.core.os.LocaleListPlatformWrapper:
@@ -16805,6 +17141,7 @@ androidx.core.os.LocaleListPlatformWrapper:
     public final java.lang.Object getLocaleList()
     public final int hashCode()
     public final java.lang.String toString()
+androidx.core.os.UserManagerCompat$Api24Impl
 androidx.core.os.UserManagerCompat
 androidx.core.text.BidiFormatter$Builder
 androidx.core.text.BidiFormatter$DirectionalityEstimator
@@ -16847,8 +17184,6 @@ androidx.core.view.MenuProvider:
     public abstract void onMenuClosed()
     public abstract boolean onMenuItemSelected()
     public abstract void onPrepareMenu()
-androidx.core.view.OnApplyWindowInsetsListener:
-    public abstract androidx.core.view.WindowInsetsCompat onApplyWindowInsets()
 androidx.core.view.OnReceiveContentViewBehavior
 androidx.core.view.OneShotPreDrawListener:
     public final void removeListener()
@@ -16860,9 +17195,8 @@ androidx.core.view.ViewCompat$$InternalSyntheticLambda$1$e3cdbeb62374cdd4f3b5b60
 androidx.core.view.ViewCompat$2
 androidx.core.view.ViewCompat$AccessibilityPaneVisibilityManager
 androidx.core.view.ViewCompat$AccessibilityViewProperty
-androidx.core.view.ViewCompat$Api21Impl$1:
-    public final synthetic androidx.core.view.OnApplyWindowInsetsListener val$listener
-androidx.core.view.ViewCompat$Api28Impl$$InternalSyntheticLambda$2$cf2e526d9bc7fa04879b38f4727ab0499e9876ab42c0943335485b5322ba2fbb$0
+androidx.core.view.ViewCompat$Api21Impl:
+    public static androidx.core.view.WindowInsetsCompat getRootWindowInsets(android.view.View)
 androidx.core.view.ViewCompat$Api28Impl
 androidx.core.view.ViewCompat$OnUnhandledKeyEventListenerCompat
 androidx.core.view.ViewCompat$UnhandledKeyEventManager$$InternalSyntheticThrowCCEIfNotNull$13$18b5a76d87d844a16da4bd40b01e4f60377663f106e0e002589cace4a6433321$0
@@ -16878,24 +17212,40 @@ androidx.core.view.ViewCompat:
     public static boolean sAccessibilityDelegateCheckFailed
     public static final androidx.core.view.ViewCompat$AccessibilityPaneVisibilityManager sAccessibilityPaneVisibilityManager
     public static java.util.WeakHashMap sTransitionNameMap
+    public static boolean sTryHiddenViewTransformMatrixToGlobal
     public static java.util.WeakHashMap sViewPropertyAnimatorMap
     public static java.lang.CharSequence getAccessibilityPaneTitle(android.view.View)
-androidx.core.view.ViewGroupCompat
+androidx.core.view.ViewGroupCompat$$InternalSyntheticLambda$2$186d03d9f4611114fbe94a77ae841d5211d1b10929767fadbf42f42b821d0374$0
+androidx.core.view.ViewGroupCompat$Api21Impl
+androidx.core.view.ViewGroupCompat:
+    public static final android.view.WindowInsets CONSUMED
+    public static boolean sCompatInsetsDispatchInstalled
+    public static void dispatchApplyWindowInsets(android.view.View,android.view.WindowInsets)
+androidx.core.view.WindowInsetsCompat$Api21ReflectionHolder
 androidx.core.view.WindowInsetsCompat$Builder
 androidx.core.view.WindowInsetsCompat$BuilderImpl20:
+    public androidx.core.graphics.Insets mStableInsets
     static void <clinit>()
+    public void setStableInsets(androidx.core.graphics.Insets)
+    public void setSystemWindowInsets(androidx.core.graphics.Insets)
+androidx.core.view.WindowInsetsCompat$BuilderImpl29$$InternalSyntheticApiModelOutline$1$004bac00e200c51a20ba52f8c33d80b4b4c93af8ca2256b21498fabedc2994fe$0
+androidx.core.view.WindowInsetsCompat$BuilderImpl29$$InternalSyntheticApiModelOutline$1$18412c72d47f2742d893eb9fdc8fa4501e48f2bf7b589a57d7a4d33727bf7763$0
 androidx.core.view.WindowInsetsCompat$BuilderImpl29$$InternalSyntheticApiModelOutline$1$1ca9d382cdc74f65913ade6ef35fb3fb253bce496d8cb46d4a4a8dcb5ca79360$0
 androidx.core.view.WindowInsetsCompat$BuilderImpl29$$InternalSyntheticApiModelOutline$1$88d406e0f46ea85f269b6a215970e55e694b8a2f3c1b6e376969f4c0aa2f9de8$0
 androidx.core.view.WindowInsetsCompat$BuilderImpl29$$InternalSyntheticApiModelOutline$1$9534b35913af28d3339cc79cca5f733a806c40a1a3edd0581a877a65b60669be$0
 androidx.core.view.WindowInsetsCompat$BuilderImpl29:
     public void setMandatorySystemGestureInsets(androidx.core.graphics.Insets)
+    public void setStableInsets(androidx.core.graphics.Insets)
     public void setSystemGestureInsets(androidx.core.graphics.Insets)
+    public void setSystemWindowInsets(androidx.core.graphics.Insets)
     public void setTappableElementInsets(androidx.core.graphics.Insets)
 androidx.core.view.WindowInsetsCompat$BuilderImpl:
     public final androidx.core.view.WindowInsetsCompat mInsets
     public androidx.core.graphics.Insets[] mInsetsTypeMask
     public void setMandatorySystemGestureInsets(androidx.core.graphics.Insets)
+    public void setStableInsets(androidx.core.graphics.Insets)
     public void setSystemGestureInsets(androidx.core.graphics.Insets)
+    public void setSystemWindowInsets(androidx.core.graphics.Insets)
     public void setTappableElementInsets(androidx.core.graphics.Insets)
 androidx.core.view.WindowInsetsCompat$Impl20:
     static void <clinit>()
@@ -16911,17 +17261,18 @@ androidx.core.view.WindowInsetsCompat$Impl29:
     public void <init>(androidx.core.view.WindowInsetsCompat,androidx.core.view.WindowInsetsCompat$Impl29)
 androidx.core.view.WindowInsetsCompat$Impl30$$InternalSyntheticApiModelOutline$1$663f2be5e2e5af2e433da663df578d75617943cd833b5cf447529c8a1ee16008$0
 androidx.core.view.WindowInsetsCompat$Impl30:
-    public static final androidx.core.view.WindowInsetsCompat CONSUMED
     public void <init>(androidx.core.view.WindowInsetsCompat,androidx.core.view.WindowInsetsCompat$Impl30)
     public androidx.core.graphics.Insets getInsets(int)
+androidx.core.view.WindowInsetsCompat$Impl34$$InternalSyntheticApiModelOutline$1$6da7e8f47f5a9f51c7313828e4aa0b5abba2c4c09c2dbd19b7858443568f0cef$0
+androidx.core.view.WindowInsetsCompat$Impl34:
+    public void <init>(androidx.core.view.WindowInsetsCompat,androidx.core.view.WindowInsetsCompat$Impl34)
+    public androidx.core.graphics.Insets getInsets(int)
 androidx.core.view.WindowInsetsCompat$Impl:
-    public static final androidx.core.view.WindowInsetsCompat CONSUMED
     public void copyWindowDataInto(androidx.core.view.WindowInsetsCompat)
     public androidx.core.graphics.Insets getInsets(int)
     public void setRootViewData(androidx.core.graphics.Insets)
 androidx.core.view.WindowInsetsCompat$Type
 androidx.core.view.WindowInsetsCompat:
-    public static final androidx.core.view.WindowInsetsCompat CONSUMED
     public static androidx.core.view.WindowInsetsCompat consumeDisplayCutout()
     public static androidx.core.view.WindowInsetsCompat consumeStableInsets()
     public static androidx.core.view.WindowInsetsCompat consumeSystemWindowInsets()
@@ -16935,6 +17286,7 @@ androidx.core.view.WindowInsetsCompat:
     public static void setRootViewData()
     public final void setRootWindowInsets(androidx.core.view.WindowInsetsCompat)
     public static void setStableInsets()
+    public final void setSystemUiVisibility(int)
     public final android.view.WindowInsets toWindowInsets()
 androidx.core.view.WindowInsetsControllerCompat$Impl20:
     public final androidx.core.view.SoftwareKeyboardControllerCompat mSoftwareKeyboardControllerCompat
@@ -16948,8 +17300,8 @@ androidx.core.view.WindowInsetsControllerCompat$Impl30:
     public final androidx.core.view.SoftwareKeyboardControllerCompat mSoftwareKeyboardControllerCompat
     public final void setSystemUiFlag(int)
     public final void unsetSystemUiFlag(int)
+androidx.core.view.WindowInsetsControllerCompat$Impl31
 androidx.core.view.WindowInsetsControllerCompat
-androidx.core.view.autofill.AutofillIdCompat
 androidx.core.view.inputmethod.EditorInfoCompat
 androidx.exifinterface.media.ExifInterface$1:
     public final synthetic androidx.exifinterface.media.ExifInterface this$0
@@ -17044,8 +17396,8 @@ androidx.fragment.app.BackStackRecordState:
 androidx.fragment.app.BackStackState$1:
     public static androidx.fragment.app.BackStackState createFromParcel()
     public static androidx.fragment.app.BackStackState[] newArray()
-androidx.fragment.app.DefaultSpecialEffectsController$$InternalSyntheticThrowCCEIfNotNull$29$fa68a3ad6243a1e7b5c55a4b289aa5df32ad15155263df1f3f8a6998e7c27a9e$0
-androidx.fragment.app.DefaultSpecialEffectsController$$InternalSyntheticThrowCCEIfNotNull$29$fa68a3ad6243a1e7b5c55a4b289aa5df32ad15155263df1f3f8a6998e7c27a9e$1
+androidx.fragment.app.DefaultSpecialEffectsController$$InternalSyntheticThrowCCEIfNotNull$33$fa68a3ad6243a1e7b5c55a4b289aa5df32ad15155263df1f3f8a6998e7c27a9e$0
+androidx.fragment.app.DefaultSpecialEffectsController$$InternalSyntheticThrowCCEIfNotNull$33$fa68a3ad6243a1e7b5c55a4b289aa5df32ad15155263df1f3f8a6998e7c27a9e$1
 androidx.fragment.app.DefaultSpecialEffectsController$AnimationEffect:
     public static androidx.fragment.app.DefaultSpecialEffectsController$AnimationInfo getAnimationInfo()
 androidx.fragment.app.DefaultSpecialEffectsController$AnimatorEffect:
@@ -17074,8 +17426,7 @@ androidx.fragment.app.DefaultSpecialEffectsController$TransitionInfo:
     public static java.lang.Object getTransition()
     public final boolean hasSharedElementTransition()
     public static boolean isOverlapAllowed()
-androidx.fragment.app.DefaultSpecialEffectsController$retainMatchingViews$1:
-    public static java.lang.Boolean invoke()
+androidx.fragment.app.DefaultSpecialEffectsController$retainMatchingViews$1
 androidx.fragment.app.DialogFragment$4:
     public static void onChanged()
     public static void onChanged$1()
@@ -17166,10 +17517,10 @@ androidx.fragment.app.FragmentLifecycleCallbacksDispatcher$$InternalSyntheticThr
 androidx.fragment.app.FragmentLifecycleCallbacksDispatcher$$InternalSyntheticThrowCCEIfNotNull$31$b6a8bf1d588f70892eec2d6fb98480ada178a57c3a45fd5a7d30227d1b1d8e5e$0
 androidx.fragment.app.FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCallbacksHolder
 androidx.fragment.app.FragmentManager$$InternalSyntheticThrowCCEIfNotNull$25$d1c12ac45bb62655b3985ec7111e412585f4af278c7e219126a3d81805c17ad1$0
-androidx.fragment.app.FragmentManager$$InternalSyntheticThrowCCEIfNotNull$45$e26a5b4c69c0ad38fc44d5abfd094c9cffa7ad59bbfcc0d97c4455fa673e6d94$0
-androidx.fragment.app.FragmentManager$$InternalSyntheticThrowCCEIfNotNull$49$38310c1fbeb590885a869c34445dd6a41dd30585e52dc29e64f3656596404d15$0
-androidx.fragment.app.FragmentManager$$InternalSyntheticThrowCCEIfNotNull$49$38310c1fbeb590885a869c34445dd6a41dd30585e52dc29e64f3656596404d15$1
-androidx.fragment.app.FragmentManager$$InternalSyntheticThrowCCEIfNotNull$55$5def81799f4e480971deb6f4ba60ac23ab69c377367e533c13f7a78b8b9d120b$0
+androidx.fragment.app.FragmentManager$$InternalSyntheticThrowCCEIfNotNull$47$38310c1fbeb590885a869c34445dd6a41dd30585e52dc29e64f3656596404d15$0
+androidx.fragment.app.FragmentManager$$InternalSyntheticThrowCCEIfNotNull$47$38310c1fbeb590885a869c34445dd6a41dd30585e52dc29e64f3656596404d15$1
+androidx.fragment.app.FragmentManager$$InternalSyntheticThrowCCEIfNotNull$47$e26a5b4c69c0ad38fc44d5abfd094c9cffa7ad59bbfcc0d97c4455fa673e6d94$0
+androidx.fragment.app.FragmentManager$$InternalSyntheticThrowCCEIfNotNull$53$5def81799f4e480971deb6f4ba60ac23ab69c377367e533c13f7a78b8b9d120b$0
 androidx.fragment.app.FragmentManager$1$$InternalSyntheticThrowCCEIfNotNull$35$65ba6792d6f66d4ba163358632520bf65f1f8ffc0030703c83f5db859d189807$0
 androidx.fragment.app.FragmentManager$10:
     public static void onActivityResult()
@@ -17491,8 +17842,8 @@ androidx.lifecycle.LifecycleRegistry:
     public final void pushParentState(androidx.lifecycle.Lifecycle$State)
 androidx.lifecycle.LifecycleRegistryOwner
 androidx.lifecycle.Lifecycling$$InternalSyntheticThrowCCEIfNotNull$19$ab5c476e135a1d44128cbaa6f4e94c8220df3d4b3d17b5525bb9dfd11d4df32e$0
-androidx.lifecycle.Lifecycling$$InternalSyntheticThrowCCEIfNotNull$43$bc1cb02f26a21e554c80ccfc43cd0f85b75836c3954758eedbef9e88ab166b5d$0
-androidx.lifecycle.Lifecycling$$InternalSyntheticThrowCCEIfNotNull$43$bc1cb02f26a21e554c80ccfc43cd0f85b75836c3954758eedbef9e88ab166b5d$1
+androidx.lifecycle.Lifecycling$$InternalSyntheticThrowCCEIfNotNull$41$bc1cb02f26a21e554c80ccfc43cd0f85b75836c3954758eedbef9e88ab166b5d$0
+androidx.lifecycle.Lifecycling$$InternalSyntheticThrowCCEIfNotNull$41$bc1cb02f26a21e554c80ccfc43cd0f85b75836c3954758eedbef9e88ab166b5d$1
 androidx.lifecycle.Lifecycling:
     public static final androidx.lifecycle.Lifecycling INSTANCE
     public static final java.util.HashMap callbackCache
@@ -17537,7 +17888,7 @@ androidx.lifecycle.ProcessLifecycleOwner:
     public final void dispatchStopIfNeeded$lifecycle_process_release()
 androidx.lifecycle.ReflectiveGenericLifecycleObserver
 androidx.lifecycle.ReportFragment$ActivityInitializationListener
-androidx.lifecycle.ReportFragment$Companion$$InternalSyntheticThrowCCEIfNotNull$151$6606f6a9d6c00feabd13f693204c7c685bcfd577a1c056fdbb01af5d22a24ba7$0
+androidx.lifecycle.ReportFragment$Companion$$InternalSyntheticThrowCCEIfNotNull$149$6606f6a9d6c00feabd13f693204c7c685bcfd577a1c056fdbb01af5d22a24ba7$0
 androidx.lifecycle.ReportFragment$Companion:
     public static androidx.lifecycle.ReportFragment get()
 androidx.lifecycle.ReportFragment$LifecycleCallbacks$Companion:
@@ -17617,9 +17968,9 @@ androidx.loader.app.LoaderManager:
     public abstract void dump(java.lang.String,java.io.PrintWriter)
     public abstract void markForRedelivery()
 androidx.loader.app.LoaderManagerImpl$LoaderInfo
-androidx.loader.app.LoaderManagerImpl$LoaderViewModel$$InternalSyntheticThrowCCEIfNotNull$23$03d6c38ef090388a274ae12bea192b4838ac2eaead458c1a7b2e62cdaea3f9b3$0
-androidx.loader.app.LoaderManagerImpl$LoaderViewModel$$InternalSyntheticThrowCCEIfNotNull$23$09218e4a23dbb03b620e98c146f2d50a856040e38ac00f6f06edb97c2dbc5c22$0
-androidx.loader.app.LoaderManagerImpl$LoaderViewModel$$InternalSyntheticThrowCCEIfNotNull$23$3a63107d3ea56ee2703f3d2b71f78784deefc38652a9ab3ef1d685999e616087$0
+androidx.loader.app.LoaderManagerImpl$LoaderViewModel$$InternalSyntheticThrowCCEIfNotNull$25$03d6c38ef090388a274ae12bea192b4838ac2eaead458c1a7b2e62cdaea3f9b3$0
+androidx.loader.app.LoaderManagerImpl$LoaderViewModel$$InternalSyntheticThrowCCEIfNotNull$25$09218e4a23dbb03b620e98c146f2d50a856040e38ac00f6f06edb97c2dbc5c22$0
+androidx.loader.app.LoaderManagerImpl$LoaderViewModel$$InternalSyntheticThrowCCEIfNotNull$25$3a63107d3ea56ee2703f3d2b71f78784deefc38652a9ab3ef1d685999e616087$0
 androidx.loader.app.LoaderManagerImpl$LoaderViewModel:
     public boolean mCreatingLoader
     public static void dump()
@@ -17739,7 +18090,7 @@ androidx.room.AutoClosingRoomOpenHelper:
     public final androidx.sqlite.db.SupportSQLiteDatabase getWritableDatabase()
     public final void setWriteAheadLoggingEnabled(boolean)
 androidx.room.AutoClosingRoomOpenHelperFactory
-androidx.room.CoroutinesRoom$Companion$createFlow$1$1$$InternalSyntheticThrowCCEIfNotNull$253$8d90a933deb753ecdbd5d628f30cc89c435df6dac4f82b9d30a968ed416b5fc6$0
+androidx.room.CoroutinesRoom$Companion$createFlow$1$1$$InternalSyntheticThrowCCEIfNotNull$251$8d90a933deb753ecdbd5d628f30cc89c435df6dac4f82b9d30a968ed416b5fc6$0
 androidx.room.CoroutinesRoom$Companion$createFlow$1$1$1:
     public final java.lang.Object invoke$2()
 androidx.room.CoroutinesRoom$Companion$createFlow$1$1:
@@ -18657,7 +19008,7 @@ androidx.work.impl.WorkLauncherImpl:
     public final void startWork(androidx.work.impl.StartStopToken,androidx.work.WorkerParameters$RuntimeExtras)
     public final void stopWork(androidx.work.impl.StartStopToken)
     public static void stopWorkWithReason()
-androidx.work.impl.WorkManagerImpl$$InternalSyntheticThrowCCEIfNotNull$120$d0bdf6fd4f7846a2bf42f0a1bec8b82c938e6977c6ca8b9e75c3f0984df322ba$0
+androidx.work.impl.WorkManagerImpl$$InternalSyntheticThrowCCEIfNotNull$118$d0bdf6fd4f7846a2bf42f0a1bec8b82c938e6977c6ca8b9e75c3f0984df322ba$0
 androidx.work.impl.WorkManagerImpl$Api24Impl
 androidx.work.impl.WorkManagerImpl:
     public static final java.lang.String TAG
@@ -18917,7 +19268,7 @@ androidx.work.impl.model.WorkNameDao_Impl:
     public static void insert()
 androidx.work.impl.model.WorkProgress
 androidx.work.impl.model.WorkProgressDao
-androidx.work.impl.model.WorkProgressDao_Impl$1$$InternalSyntheticThrowCCEIfNotNull$52$508484271f30a7fa3c29e90e9e20c34278f9365cdf1db757f1c7ad95fceb8f00$0
+androidx.work.impl.model.WorkProgressDao_Impl$1$$InternalSyntheticThrowCCEIfNotNull$50$508484271f30a7fa3c29e90e9e20c34278f9365cdf1db757f1c7ad95fceb8f00$0
 androidx.work.impl.model.WorkProgressDao_Impl$1:
     public final synthetic androidx.work.impl.model.WorkProgressDao_Impl this$0
     public static void bind$4()
@@ -19367,10 +19718,10 @@ com.google.android.gms.common.api.ApiException:
     public static com.google.android.gms.common.api.Status getStatus()
     public static int getStatusCode()
 com.google.android.gms.common.api.CommonStatusCodes
-com.google.android.gms.common.api.GoogleApi$$InternalSyntheticThrowCCEIfNotNull$161$daa842e2bcf2f19cc0f90a7d36350410075fb86372360aff956ed17b5fc08fc9$0
-com.google.android.gms.common.api.GoogleApi$$InternalSyntheticThrowCCEIfNotNull$161$daa842e2bcf2f19cc0f90a7d36350410075fb86372360aff956ed17b5fc08fc9$1
-com.google.android.gms.common.api.GoogleApi$$InternalSyntheticThrowCCEIfNotNull$161$daa842e2bcf2f19cc0f90a7d36350410075fb86372360aff956ed17b5fc08fc9$2
-com.google.android.gms.common.api.GoogleApi$$InternalSyntheticThrowCCEIfNotNull$163$cbd6e37ea8225c7e7b675d4c0db7054199d7019f9410f22dd419e488a84996a0$0
+com.google.android.gms.common.api.GoogleApi$$InternalSyntheticThrowCCEIfNotNull$159$daa842e2bcf2f19cc0f90a7d36350410075fb86372360aff956ed17b5fc08fc9$0
+com.google.android.gms.common.api.GoogleApi$$InternalSyntheticThrowCCEIfNotNull$159$daa842e2bcf2f19cc0f90a7d36350410075fb86372360aff956ed17b5fc08fc9$1
+com.google.android.gms.common.api.GoogleApi$$InternalSyntheticThrowCCEIfNotNull$159$daa842e2bcf2f19cc0f90a7d36350410075fb86372360aff956ed17b5fc08fc9$2
+com.google.android.gms.common.api.GoogleApi$$InternalSyntheticThrowCCEIfNotNull$161$cbd6e37ea8225c7e7b675d4c0db7054199d7019f9410f22dd419e488a84996a0$0
 com.google.android.gms.common.api.GoogleApi$Settings$Builder
 com.google.android.gms.common.api.GoogleApi$Settings:
     public final android.os.Looper zab
@@ -19424,8 +19775,8 @@ com.google.android.gms.common.api.internal.BackgroundDetector:
     public static boolean readCurrentStateIfPossible()
 com.google.android.gms.common.api.internal.BasePendingResult
 com.google.android.gms.common.api.internal.ConnectionCallbacks
-com.google.android.gms.common.api.internal.GoogleApiManager$$InternalSyntheticThrowCCEIfNotNull$175$176a2ecec2e201424803a5fc985d9d742a2e18976d4340f9044d3126d8ef36fa$0
-com.google.android.gms.common.api.internal.GoogleApiManager$$InternalSyntheticThrowCCEIfNotNull$175$176a2ecec2e201424803a5fc985d9d742a2e18976d4340f9044d3126d8ef36fa$1
+com.google.android.gms.common.api.internal.GoogleApiManager$$InternalSyntheticThrowCCEIfNotNull$173$176a2ecec2e201424803a5fc985d9d742a2e18976d4340f9044d3126d8ef36fa$0
+com.google.android.gms.common.api.internal.GoogleApiManager$$InternalSyntheticThrowCCEIfNotNull$173$176a2ecec2e201424803a5fc985d9d742a2e18976d4340f9044d3126d8ef36fa$1
 com.google.android.gms.common.api.internal.GoogleApiManager:
     public com.google.android.gms.common.api.internal.zaae zao
     public final void zaA(com.google.android.gms.common.api.internal.zaae)
@@ -19531,7 +19882,7 @@ com.google.android.gms.common.api.internal.zabl:
     public static void onBackgroundStateChanged()
 com.google.android.gms.common.api.internal.zabp:
     public static void onSignOutComplete()
-com.google.android.gms.common.api.internal.zabq$$InternalSyntheticThrowCCEIfNotNull$166$6e59dd714f23b8788d809f7a1ddb855157feafdba66a5fd0e46484d88534a2db$0
+com.google.android.gms.common.api.internal.zabq$$InternalSyntheticThrowCCEIfNotNull$164$6e59dd714f23b8788d809f7a1ddb855157feafdba66a5fd0e46484d88534a2db$0
 com.google.android.gms.common.api.internal.zabq:
     public static boolean zaA()
     public static boolean zaB()
@@ -20461,6 +20812,10 @@ com.google.gson.stream.JsonWriter:
     public static void setIndent()
     public static void setLenient()
     public static void setSerializeNulls()
+dev.fluttercommunity.plus.packageinfo.PackageInfoPlugin$Companion
+dev.fluttercommunity.plus.packageinfo.PackageInfoPlugin:
+    public static final dev.fluttercommunity.plus.packageinfo.PackageInfoPlugin$Companion Companion
+    static void <clinit>()
 dev.fluttercommunity.workmanager.BackgroundWorker$Companion
 dev.fluttercommunity.workmanager.BackgroundWorker:
     public static final dev.fluttercommunity.workmanager.BackgroundWorker$Companion Companion
@@ -20719,7 +21074,7 @@ kotlin.collections.ArraysKt__ArraysKt$$InternalSyntheticThrowCCEIfNotNull$15$0df
 kotlin.collections.ArraysKt__ArraysKt$$InternalSyntheticThrowCCEIfNotNull$15$0dfe1bcaba1f8e0f6665020bc144a0178eed243f88eabf9f5cdabd418875bbac$6
 kotlin.collections.ArraysKt__ArraysKt$$InternalSyntheticThrowCCEIfNotNull$15$0dfe1bcaba1f8e0f6665020bc144a0178eed243f88eabf9f5cdabd418875bbac$7
 kotlin.collections.ArraysKt___ArraysJvmKt:
-    public static synthetic void copyInto$default(java.lang.Object[],java.lang.Object[],int,int,int)
+    public static synthetic void copyInto$default(int[],int[],int)
 kotlin.collections.ArraysKt___ArraysKt
 kotlin.collections.ArraysUtilJVM
 kotlin.collections.CollectionsKt__CollectionsJVMKt:
@@ -21081,7 +21436,7 @@ kotlinx.coroutines.CoroutineExceptionHandler:
     public abstract void handleException(java.lang.Throwable)
 kotlinx.coroutines.CoroutineExceptionHandlerKt:
     public static final java.lang.Throwable handlerException(java.lang.Throwable,java.lang.Throwable)
-kotlinx.coroutines.CoroutineId$$InternalSyntheticThrowCCEIfNotNull$282$a7d8b984f14ef6811fc36f0d030a1c8a7f27075d192601697212118d266ca07a$0
+kotlinx.coroutines.CoroutineId$$InternalSyntheticThrowCCEIfNotNull$280$a7d8b984f14ef6811fc36f0d030a1c8a7f27075d192601697212118d266ca07a$0
 kotlinx.coroutines.CoroutineId$$InternalSyntheticThrowCCEIfNotNull$35$db4fcf294f73e0414b61d779f72a560fad56831e560e6b71def36fecaf64a8d1$0
 kotlinx.coroutines.CoroutineId$Key
 kotlinx.coroutines.CoroutineId
@@ -21268,12 +21623,12 @@ kotlinx.coroutines.channels.BufferedChannel$$InternalSyntheticBackportWithForwar
 kotlinx.coroutines.channels.BufferedChannel$$InternalSyntheticBackportWithForwarding$1$915ab5c5529a590134b6663803c3baef534b6f092225c1a2ebcbf37de2182de5$0
 kotlinx.coroutines.channels.BufferedChannel$$InternalSyntheticBackportWithForwarding$1$f6bb09bb3c0bba5d303aaa34459cabba537dfaac06189a50bc11ce4f5cc501c6$0
 kotlinx.coroutines.channels.BufferedChannel$$InternalSyntheticBackportWithForwarding$2$41641a56641855d807a333abf897296fa2531140a0b21ecf112eca7ca5040b4f$0
-kotlinx.coroutines.channels.BufferedChannel$$InternalSyntheticThrowCCEIfNotNull$102$477558f47305b46a97e98327e82dc157ded03b2c689ba9650782ad95656735aa$0
-kotlinx.coroutines.channels.BufferedChannel$$InternalSyntheticThrowCCEIfNotNull$102$477558f47305b46a97e98327e82dc157ded03b2c689ba9650782ad95656735aa$1
-kotlinx.coroutines.channels.BufferedChannel$$InternalSyntheticThrowCCEIfNotNull$92$ede10579b622c50962ff73dd2f82c141abf9f8a33531ab07fe72fe1a6b92cb41$0
-kotlinx.coroutines.channels.BufferedChannel$$InternalSyntheticThrowCCEIfNotNull$92$ede10579b622c50962ff73dd2f82c141abf9f8a33531ab07fe72fe1a6b92cb41$1
-kotlinx.coroutines.channels.BufferedChannel$$InternalSyntheticThrowCCEIfNotNull$92$ede10579b622c50962ff73dd2f82c141abf9f8a33531ab07fe72fe1a6b92cb41$2
-kotlinx.coroutines.channels.BufferedChannel$$InternalSyntheticThrowCCEIfNotNull$94$1bb6e5cf839f3124517897dcbfa0502b9b5985320d9fac2dcb2d5f0b0cf2bdf9$0
+kotlinx.coroutines.channels.BufferedChannel$$InternalSyntheticThrowCCEIfNotNull$100$477558f47305b46a97e98327e82dc157ded03b2c689ba9650782ad95656735aa$0
+kotlinx.coroutines.channels.BufferedChannel$$InternalSyntheticThrowCCEIfNotNull$100$477558f47305b46a97e98327e82dc157ded03b2c689ba9650782ad95656735aa$1
+kotlinx.coroutines.channels.BufferedChannel$$InternalSyntheticThrowCCEIfNotNull$90$ede10579b622c50962ff73dd2f82c141abf9f8a33531ab07fe72fe1a6b92cb41$0
+kotlinx.coroutines.channels.BufferedChannel$$InternalSyntheticThrowCCEIfNotNull$90$ede10579b622c50962ff73dd2f82c141abf9f8a33531ab07fe72fe1a6b92cb41$1
+kotlinx.coroutines.channels.BufferedChannel$$InternalSyntheticThrowCCEIfNotNull$90$ede10579b622c50962ff73dd2f82c141abf9f8a33531ab07fe72fe1a6b92cb41$2
+kotlinx.coroutines.channels.BufferedChannel$$InternalSyntheticThrowCCEIfNotNull$92$1bb6e5cf839f3124517897dcbfa0502b9b5985320d9fac2dcb2d5f0b0cf2bdf9$0
 kotlinx.coroutines.channels.BufferedChannel$BufferedChannelIterator:
     public static boolean tryResumeHasNext()
     public static void tryResumeHasNextOnClosedChannel()
@@ -21385,7 +21740,7 @@ kotlinx.coroutines.flow.SafeFlow:
 kotlinx.coroutines.flow.SharedFlow
 kotlinx.coroutines.flow.SharedFlowImpl
 kotlinx.coroutines.flow.SharedFlowKt
-kotlinx.coroutines.flow.StateFlowImpl$$InternalSyntheticThrowCCEIfNotNull$199$f1d1f40a1c8fc04c0a8d71575b6c25dc238f9224ed939db2b509a92e2c81cbda$0
+kotlinx.coroutines.flow.StateFlowImpl$$InternalSyntheticThrowCCEIfNotNull$197$f1d1f40a1c8fc04c0a8d71575b6c25dc238f9224ed939db2b509a92e2c81cbda$0
 kotlinx.coroutines.flow.StateFlowImpl:
     public static kotlinx.coroutines.flow.StateFlowSlot createSlot()
     public final kotlinx.coroutines.flow.internal.AbstractSharedFlowSlot createSlot()
@@ -21535,7 +21890,7 @@ kotlinx.coroutines.internal.MainDispatcherFactory:
     public abstract kotlinx.coroutines.MainCoroutineDispatcher createDispatcher()
     public abstract int getLoadPriority()
     public abstract java.lang.String hintOnError()
-kotlinx.coroutines.internal.MainDispatcherLoader$$InternalSyntheticServiceLoad$47$f276d930127bf31abac2a96b511517f3813786351b5e8dbb96d98e1e1a616b27$0
+kotlinx.coroutines.internal.MainDispatcherLoader$$InternalSyntheticServiceLoad$45$f276d930127bf31abac2a96b511517f3813786351b5e8dbb96d98e1e1a616b27$0
 kotlinx.coroutines.internal.MainDispatcherLoader:
     public static final boolean FAST_SERVICE_LOADER_ENABLED
     public static final kotlinx.coroutines.internal.MainDispatcherLoader INSTANCE
@@ -21567,7 +21922,7 @@ kotlinx.coroutines.internal.ThreadContextKt$countAll$1:
     public static java.lang.Object invoke$12()
 kotlinx.coroutines.internal.ThreadContextKt$findOne$1:
     public static void invoke$4()
-kotlinx.coroutines.internal.ThreadContextKt$updateState$1$$InternalSyntheticThrowCCEIfNotNull$282$3ff7ef4e574584d34e294bf8ac548819e9de353a79a9bbbdd8ea1b7dd939fd97$0
+kotlinx.coroutines.internal.ThreadContextKt$updateState$1$$InternalSyntheticThrowCCEIfNotNull$280$3ff7ef4e574584d34e294bf8ac548819e9de353a79a9bbbdd8ea1b7dd939fd97$0
 kotlinx.coroutines.internal.ThreadContextKt$updateState$1:
     public static kotlinx.coroutines.internal.ThreadState invoke()
 kotlinx.coroutines.internal.ThreadContextKt:

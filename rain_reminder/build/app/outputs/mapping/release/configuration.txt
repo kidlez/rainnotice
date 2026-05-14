@@ -159,24 +159,6 @@
 -dontwarn com.google.android.play.core.tasks.**
 
 # End of content from E:\code\rain_reminder\android\app\proguard-rules.pro
-# The proguard configuration file for the following section is C:\Users\Administrator\.gradle\caches\8.14\transforms\d136afff395b510bc52cacb3b8428ad5\transformed\work-runtime-2.10.2\proguard.txt
-# Keep ListenableWorker / Worker if not removed during shrinking
--keepnames class * extends androidx.work.ListenableWorker
-# Keep all constructors on ListenableWorker, Worker if class is kept
--keepclassmembers public class * extends androidx.work.ListenableWorker {
-    public <init>(...);
-}
-
-# We need to keep WorkerParameters for the ListenableWorker constructor that is used by the
-# default instantiation strategy in WorkerFactory.
--keep class androidx.work.WorkerParameters
-
-# Keep InputMerger if not removed during shrinking
--keepnames class * extends androidx.work.InputMerger
-# Keep constructor on InputMerger if class is kept
--keepclassmembers class * extends androidx.work.InputMerger { void <init>(); }
-
-# End of content from C:\Users\Administrator\.gradle\caches\8.14\transforms\d136afff395b510bc52cacb3b8428ad5\transformed\work-runtime-2.10.2\proguard.txt
 # The proguard configuration file for the following section is E:\code\rain_reminder\build\jni_flutter\intermediates\consumer_proguard_dir\release\exportReleaseConsumerProguardFiles\lib0\proguard.txt
 -keep class com.github.dart_lang.jni_flutter.** { *; }
 
@@ -210,6 +192,24 @@
     public static final android.os.Parcelable$Creator *;
 }
 # End of content from C:\Users\Administrator\.gradle\caches\8.14\transforms\1f0568a59d3939d9ab3b6e42718a245a\transformed\media-1.1.0\proguard.txt
+# The proguard configuration file for the following section is C:\Users\Administrator\.gradle\caches\8.14\transforms\d136afff395b510bc52cacb3b8428ad5\transformed\work-runtime-2.10.2\proguard.txt
+# Keep ListenableWorker / Worker if not removed during shrinking
+-keepnames class * extends androidx.work.ListenableWorker
+# Keep all constructors on ListenableWorker, Worker if class is kept
+-keepclassmembers public class * extends androidx.work.ListenableWorker {
+    public <init>(...);
+}
+
+# We need to keep WorkerParameters for the ListenableWorker constructor that is used by the
+# default instantiation strategy in WorkerFactory.
+-keep class androidx.work.WorkerParameters
+
+# Keep InputMerger if not removed during shrinking
+-keepnames class * extends androidx.work.InputMerger
+# Keep constructor on InputMerger if class is kept
+-keepclassmembers class * extends androidx.work.InputMerger { void <init>(); }
+
+# End of content from C:\Users\Administrator\.gradle\caches\8.14\transforms\d136afff395b510bc52cacb3b8428ad5\transformed\work-runtime-2.10.2\proguard.txt
 # The proguard configuration file for the following section is C:\Users\Administrator\.gradle\caches\8.14\transforms\ba18b21e180de95697f7173f8fcc30d1\transformed\window-1.2.0\proguard.txt
 # Copyright (C) 2020 The Android Open Source Project
 #
@@ -429,7 +429,11 @@
 }
 
 # End of content from C:\Users\Administrator\.gradle\caches\8.14\transforms\5b373c0a4506de526e8f60d9669d24e2\transformed\lifecycle-viewmodel-savedstate-2.7.0\proguard.txt
-# The proguard configuration file for the following section is C:\Users\Administrator\.gradle\caches\8.14\transforms\8fce4b6817afdbcb773f05070652658e\transformed\core-1.13.1\proguard.txt
+# The proguard configuration file for the following section is C:\Users\Administrator\.gradle\caches\8.14\transforms\c85ad875cbcbfcc468baa84e0e6a3598\transformed\core-ktx-1.16.0\proguard.txt
+# Intentionally empty proguard rules to indicate this library is safe to shrink
+
+# End of content from C:\Users\Administrator\.gradle\caches\8.14\transforms\c85ad875cbcbfcc468baa84e0e6a3598\transformed\core-ktx-1.16.0\proguard.txt
+# The proguard configuration file for the following section is C:\Users\Administrator\.gradle\caches\8.14\transforms\3d6d92c9eaa21796c4612e27db14a4f1\transformed\core-1.16.0\proguard.txt
 # Never inline methods, but allow shrinking and obfuscation.
 -keepclassmembernames,allowobfuscation,allowshrinking class androidx.core.view.ViewCompat$Api* {
   <methods>;
@@ -447,13 +451,17 @@
   <methods>;
 }
 
-# End of content from C:\Users\Administrator\.gradle\caches\8.14\transforms\8fce4b6817afdbcb773f05070652658e\transformed\core-1.13.1\proguard.txt
+# End of content from C:\Users\Administrator\.gradle\caches\8.14\transforms\3d6d92c9eaa21796c4612e27db14a4f1\transformed\core-1.16.0\proguard.txt
 # The proguard configuration file for the following section is C:\Users\Administrator\.gradle\caches\8.14\transforms\7620754de890d3f13a14921cce3beafe\transformed\room-runtime-2.6.1\proguard.txt
 -keep class * extends androidx.room.RoomDatabase
 -dontwarn androidx.room.paging.**
 -dontwarn androidx.lifecycle.LiveData
 
 # End of content from C:\Users\Administrator\.gradle\caches\8.14\transforms\7620754de890d3f13a14921cce3beafe\transformed\room-runtime-2.6.1\proguard.txt
+# The proguard configuration file for the following section is C:\Users\Administrator\.gradle\caches\8.14\transforms\14774cee1e7d678c7a58085d650ec484\transformed\core-viewtree-1.0.0\proguard.txt
+# Intentionally empty proguard rules to indicate this library is safe to shrink
+
+# End of content from C:\Users\Administrator\.gradle\caches\8.14\transforms\14774cee1e7d678c7a58085d650ec484\transformed\core-viewtree-1.0.0\proguard.txt
 # The proguard configuration file for the following section is C:\Users\Administrator\.gradle\caches\8.14\transforms\9425c517869891ae786093a76f77d4d8\transformed\startup-runtime-1.1.1\proguard.txt
 # It's important that we preserve initializer names, given they are used in the AndroidManifest.xml.
 -keepnames class * extends androidx.startup.Initializer

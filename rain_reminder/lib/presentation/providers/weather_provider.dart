@@ -48,43 +48,45 @@ class WeatherNotifier extends StateNotifier<WeatherData?> {
     final settings = _settings;
     if (settings.defaultCityCode.isEmpty) return;
 
+    WeatherData? newWeather;
     try {
-      state = await _weatherService.getCurrentWeather(
+      newWeather = await _weatherService.getCurrentWeather(
         settings.apiKey, settings.defaultCityCode, settings.defaultCityName,
       );
     } catch (_) {}
 
-    if (state != null) {
+    if (newWeather != null) {
       final minutely = await _weatherService.getMinutelyRain(
         settings.apiKey, settings.defaultCityCode, settings.defaultCityName,
       );
+      // 一次性赋值，避免中间状态导致 tips 闪烁
       state = WeatherData(
-        cityName: state!.cityName,
-        temperature: state!.temperature,
-        condition: state!.condition,
-        iconCode: state!.iconCode,
-        humidity: state!.humidity,
-        windDirection: state!.windDirection,
-        windScale: state!.windScale,
-        isRaining: state!.isRaining || minutely.minutesUntilRain != null,
+        cityName: newWeather.cityName,
+        temperature: newWeather.temperature,
+        condition: newWeather.condition,
+        iconCode: newWeather.iconCode,
+        humidity: newWeather.humidity,
+        windDirection: newWeather.windDirection,
+        windScale: newWeather.windScale,
+        isRaining: newWeather.isRaining || minutely.minutesUntilRain != null,
         minutesUntilRain: minutely.minutesUntilRain,
-        conditionText: state!.conditionText,
-        pm25: state!.pm25,
-        yesterdayTemp: state!.yesterdayTemp,
-        rainIn2Hours: state!.rainIn2Hours,
-        tempDrop: state!.tempDrop,
+        conditionText: newWeather.conditionText,
+        pm25: newWeather.pm25,
+        yesterdayTemp: newWeather.yesterdayTemp,
+        rainIn2Hours: newWeather.rainIn2Hours,
+        tempDrop: newWeather.tempDrop,
       );
       _lastFetched = DateTime.now();
 
       // 缓存天气
       _storage.saveWeatherCache({
-        'city': state!.cityName,
-        'temp': state!.temperature,
-        'condition': state!.condition,
-        'icon': state!.iconCode,
-        'humidity': state!.humidity,
-        'wind': state!.windDirection,
-        'windScale': state!.windScale,
+        'city': newWeather.cityName,
+        'temp': newWeather.temperature,
+        'condition': newWeather.condition,
+        'icon': newWeather.iconCode,
+        'humidity': newWeather.humidity,
+        'wind': newWeather.windDirection,
+        'windScale': newWeather.windScale,
       });
     }
   }

@@ -4,16 +4,16 @@
 
 ## 方式一：Windows 直接启动（推荐，零依赖）
 
-**已完成构建，无需任何环境！**
+**直接使用发行版，复制到任意 PC 运行：**
 
-双击运行即可：
 ```
-E:\code\rain_reminder\build\windows\x64\runner\Release\rain_reminder.exe
+dist\windows\rain_reminder.exe          ← 双击启动
+dist\windows\run.bat                    ← 备用启动
 ```
 
-整个 `Release` 文件夹（约 33MB）可复制到任意 Windows 电脑，双击 exe 直接运行。
+`dist/windows/` 目录已包含全部运行时依赖（Flutter 引擎、VC++ 运行时、所有插件 DLL），复制到任意 Windows 电脑双击 exe 即可运行，无需安装任何环境。
 
-**重新构建 Windows exe（修改代码后）**：
+**重新构建并打包发行版（修改代码后）**：
 
 ```powershell
 $env:PUB_HOSTED_URL = "https://pub.flutter-io.cn"

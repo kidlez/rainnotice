@@ -318,6 +318,33 @@ runner_IS_TOP_LEVEL:STATIC=OFF
 //Value Computed by CMake
 runner_SOURCE_DIR:STATIC=E:/code/rain_reminder/windows/runner
 
+//Value Computed by CMake
+screen_retriever_windows_BINARY_DIR:STATIC=E:/code/rain_reminder/build/windows/x64/plugins/screen_retriever_windows
+
+//Value Computed by CMake
+screen_retriever_windows_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+screen_retriever_windows_SOURCE_DIR:STATIC=E:/code/rain_reminder/windows/flutter/ephemeral/.plugin_symlinks/screen_retriever_windows/windows
+
+//Value Computed by CMake
+system_tray_BINARY_DIR:STATIC=E:/code/rain_reminder/build/windows/x64/plugins/system_tray
+
+//Value Computed by CMake
+system_tray_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+system_tray_SOURCE_DIR:STATIC=E:/code/rain_reminder/windows/flutter/ephemeral/.plugin_symlinks/system_tray/windows
+
+//Value Computed by CMake
+window_manager_BINARY_DIR:STATIC=E:/code/rain_reminder/build/windows/x64/plugins/window_manager
+
+//Value Computed by CMake
+window_manager_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+window_manager_SOURCE_DIR:STATIC=E:/code/rain_reminder/windows/flutter/ephemeral/.plugin_symlinks/window_manager/windows
+
 
 ########################
 # INTERNAL cache entries
@@ -411,7 +438,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MT
 CMAKE_MT-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=11
 //Platform information initialized
 CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //noop for ranlib

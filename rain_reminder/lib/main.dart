@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:system_tray/system_tray.dart';
+import 'package:window_manager/window_manager.dart';
 import 'data/services/storage_service.dart';
 import 'data/services/notification_service.dart';
 import 'data/services/tts_service.dart';
@@ -16,6 +18,8 @@ final ttsService = TtsService();
 final messageLoader = MessageLoader();
 final locatorService = LocatorService();
 
+final SystemTray _systemTray = SystemTray();
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
@@ -24,6 +28,24 @@ void main() async {
     DeviceOrientation.portraitDown,
   ]);
 
+  // 窗口管理：关闭 → 最小化到托盘
+  await windowManager.ensureInitialized();
+  await windowManager.setPreventClose(true);
+  windowManager.addListener(_WindowListener());
+  WindowOptions windowOptions = const WindowOptions(
+    size: Size(420, 780),
+    minimumSize: Size(380, 600),
+    center: true,
+    title: '雨声提醒',
+  );
+  windowManager.waitUntilReadyToShow(windowOptions, () async {
+    await windowManager.show();
+    await windowManager.focus();
+  });
+
+  // 系统托盘
+  await _initSystemTray();
+
   // 初始化服务
   await storageService.init();
   await storageService.migrateIfNeeded();
@@ -31,7 +53,7 @@ void main() async {
   await ttsService.init();
   await messageLoader.load('zh-cn');
 
-  // 自动定位：首次启动无城市时自动获取
+  // 自动定位
   final settings = storageService.getSettings();
   if (settings.defaultCityCode.isEmpty) {
     final location = await locatorService.getCurrentLocation();
@@ -52,4 +74,41 @@ void main() async {
       child: const RainReminderApp(),
     ),
   );
+}
+
+Future<void> _initSystemTray() async {
+  try {
+    await _systemTray.initSystemTray(
+      title: '雨声提醒',
+      iconPath: 'assets/icon/icon.png',
+    );
+
+    final menu = Menu();
+    await menu.buildFrom([
+      MenuItemLabel(label: '显示', onClicked: (menuItem) {
+        windowManager.show();
+        windowManager.focus();
+      }),
+      MenuItemLabel(label: '退出', onClicked: (menuItem) {
+        _systemTray.destroy();
+        windowManager.destroy();
+      }),
+    ]);
+    await _systemTray.setContextMenu(menu);
+
+    // 托盘图标点击 → 显示窗口
+    _systemTray.registerSystemTrayEventHandler((eventName) {
+      if (eventName == 'leftMouseUp' || eventName == 'leftMouseClick') {
+        windowManager.show();
+        windowManager.focus();
+      }
+    });
+  } catch (_) {}
+}
+
+class _WindowListener extends WindowListener {
+  @override
+  void onWindowClose() {
+    windowManager.hide();
+  }
 }

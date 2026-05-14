@@ -156,7 +156,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="E:\code\rain_reminder\build\windows\x64\runner\ALL_BUILD.vcxproj">
+    <ProjectReference Include="E:\code\rain_reminder\build\windows\x64\plugins\window_manager\ALL_BUILD.vcxproj">
       <Project>{3C3C5C89-3806-3976-8176-5416A47DDEE0}</Project>
       <Name>ALL_BUILD</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
