@@ -1,0 +1,1 @@
+{"version":3,"file":"standards.d.ts","sourceRoot":"","sources":["../../../lib/verifier/standards.ts"],"names":[],"mappings":"AAGA,OAAO,EAAE,gBAAgB,EAAE,kBAAkB,EAAwB,MAAM,oBAAoB,CAAA;AA0B/F,qBAAa,iBAAiB;IAChB,OAAO,CAAC,WAAW;gBAAX,WAAW,EAAE,MAAM;IAEjC,MAAM,CAAC,IAAI,EAAE,gBAAgB,EAAE,MAAM,CAAC,EAAE,WAAW,GAAG,OAAO,CAAC,kBAAkB,CAAC;CAqGxF"}

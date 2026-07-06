@@ -1,0 +1,25 @@
+{
+  "features": [
+    { "id": "F-001", "name": "store-layer", "status": "designed", "path": "features/store-layer.feature.md", "depends_on": [] },
+    { "id": "F-002", "name": "orchestrator-core", "status": "designed", "path": "features/orchestrator-core.feature.md", "depends_on": ["F-001"] },
+    { "id": "F-003", "name": "planner-agent", "status": "designed", "path": "features/planner-agent.feature.md", "depends_on": ["F-002"] },
+    { "id": "F-004", "name": "designer-agent", "status": "designed", "path": "features/designer-agent.feature.md", "depends_on": ["F-002"] },
+    { "id": "F-005", "name": "developer-agent", "status": "designed", "path": "features/developer-agent.feature.md", "depends_on": ["F-002"] },
+    { "id": "F-006", "name": "validator-agent", "status": "designed", "path": "features/validator-agent.feature.md", "depends_on": ["F-002"] },
+    { "id": "F-007", "name": "introspection-trace", "status": "designed", "path": "features/introspection-trace.feature.md", "depends_on": ["F-001"] },
+    { "id": "F-008", "name": "introspection-reflector", "status": "designed", "path": "features/introspection-reflector.feature.md", "depends_on": ["F-007", "F-006"] },
+    { "id": "F-009", "name": "introspection-planner-evolve", "status": "designed", "path": "features/introspection-planner-evolve.feature.md", "depends_on": ["F-007", "F-003"] },
+    { "id": "F-010", "name": "victory-gate", "status": "designed", "path": "features/victory-gate.feature.md", "depends_on": ["F-006", "F-004"] },
+    { "id": "F-011", "name": "safety-layer", "status": "designed", "path": "features/safety-layer.feature.md", "depends_on": ["F-001"] },
+    { "id": "F-012", "name": "agent-sdk", "status": "designed", "path": "features/agent-sdk.feature.md", "depends_on": ["F-002", "F-003", "F-004", "F-005", "F-006", "F-008", "F-010", "F-011"] },
+    { "id": "F-013", "name": "lifecycle-hooks", "status": "designed", "path": "features/lifecycle-hooks.feature.md", "depends_on": ["F-011"] },
+    { "id": "F-014", "name": "session-monitor", "status": "designed", "path": "features/session-monitor.feature.md", "depends_on": ["F-007"] },
+    { "id": "F-015", "name": "persistent-memory", "status": "designed", "path": "features/persistent-memory.feature.md", "depends_on": ["F-007"] },
+    { "id": "F-016", "name": "worktree-isolation", "status": "designed", "path": "features/worktree-isolation.feature.md", "depends_on": ["F-011"] },
+    { "id": "F-017", "name": "plantuml-agent", "status": "designed", "path": "features/plantuml-agent.feature.md", "depends_on": ["F-004"] }
+  ],
+  "meta": {
+    "version": "1.1.0",
+    "updated": "2026-07-05T23:00:00Z"
+  }
+}

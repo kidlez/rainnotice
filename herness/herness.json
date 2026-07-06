@@ -1,0 +1,26 @@
+{
+  "rootDir": ".",
+  "devkitDir": ".devkit",
+  "agents": {
+    "orchestrator": { "enabled": true },
+    "planner": { "enabled": true },
+    "designer": { "enabled": true },
+    "developer": { "enabled": true },
+    "validator": { "enabled": true },
+    "documenter": { "enabled": false },
+    "archiver": { "enabled": false },
+    "reflector": { "enabled": true }
+  },
+  "features": [
+    "features/store-layer.feature.md",
+    "features/orchestrator-core.feature.md",
+    "features/planner-agent.feature.md",
+    "features/designer-agent.feature.md",
+    "features/developer-agent.feature.md",
+    "features/validator-agent.feature.md",
+    "features/introspection-trace.feature.md",
+    "features/introspection-reflector.feature.md",
+    "features/introspection-planner-evolve.feature.md",
+    "features/victory-gate.feature.md"
+  ]
+}
