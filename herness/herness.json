@@ -1,26 +1,35 @@
 {
   "rootDir": ".",
   "devkitDir": ".devkit",
-  "agents": {
-    "orchestrator": { "enabled": true },
-    "planner": { "enabled": true },
-    "designer": { "enabled": true },
-    "developer": { "enabled": true },
-    "validator": { "enabled": true },
-    "documenter": { "enabled": false },
-    "archiver": { "enabled": false },
-    "reflector": { "enabled": true }
+  "skillFile": "SKILL.md",
+  "mcp": {
+    "command": "node",
+    "args": [".dist/mcp/server.js"],
+    "description": "herness MCP server — provides verify, safety, state, archive, memory, trace tools"
   },
-  "features": [
-    "features/store-layer.feature.md",
-    "features/orchestrator-core.feature.md",
-    "features/planner-agent.feature.md",
-    "features/designer-agent.feature.md",
-    "features/developer-agent.feature.md",
-    "features/validator-agent.feature.md",
-    "features/introspection-trace.feature.md",
-    "features/introspection-reflector.feature.md",
-    "features/introspection-planner-evolve.feature.md",
-    "features/victory-gate.feature.md"
-  ]
+  "phases": {
+    "clarify": { "enabled": true, "module": "designer", "categories": 8 },
+    "plan": { "enabled": true, "module": "planner" },
+    "implement": { "enabled": true, "module": "developer" },
+    "verify": { "enabled": true, "module": "validator", "tiers": ["light", "standard", "deep"] },
+    "gate": { "enabled": true, "module": "victory-gate", "maxRetries": 3 },
+    "archive": { "enabled": true, "module": "archiver" }
+  },
+  "safety": {
+    "checkpoint": { "enabled": true },
+    "trash": { "enabled": true, "purgeAfterHours": 168 },
+    "rollback": { "enabled": true }
+  },
+  "introspection": {
+    "trace": { "enabled": true },
+    "reflector": { "enabled": true },
+    "plannerEvolve": { "enabled": true, "minSamples": 10, "alpha": 0.3 }
+  },
+  "extras": {
+    "hooks": { "enabled": false },
+    "monitor": { "enabled": false },
+    "memory": { "enabled": true },
+    "worktree": { "enabled": false },
+    "plantuml": { "enabled": false }
+  }
 }

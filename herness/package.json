@@ -4,18 +4,22 @@
   "description": "Document-driven multi-agent development framework",
   "main": "lib/orchestrator/index.js",
   "bin": {
-    "herness": "bin/herness.js"
+    "herness": "bin/herness.js",
+    "herness-mcp": "bin/herness-mcp.js"
   },
   "files": [
     "bin/",
     "lib/",
     "shared/",
-    "templates/"
+    "templates/",
+    "mcp/",
+    "SKILL.md"
   ],
   "scripts": {
     "build": "tsc",
     "typecheck": "tsc --noEmit",
-    "test": "node --experimental-vm-modules node_modules/.bin/jest || echo 'no test runner configured'"
+    "test": "node --experimental-vm-modules node_modules/.bin/jest || echo 'no test runner configured'",
+    "mcp": "node .dist/mcp/server.js"
   },
   "devDependencies": {
     "@types/node": "^26.1.0",

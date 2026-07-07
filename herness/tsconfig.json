@@ -19,7 +19,8 @@
   "include": [
     "lib/**/*.ts",
     "shared/**/*.ts",
-    "bin/**/*.ts"
+    "bin/**/*.ts",
+    "mcp/**/*.ts"
   ],
   "exclude": [
     "node_modules",
